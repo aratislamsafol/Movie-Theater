@@ -68,9 +68,9 @@ const OffCanvas = () => {
       </div>
 
       {/* Menu Items */}
-      <ul className='mt-8 [&_li>a]:text-[16px]'>
+      <ul className='mt-8 [&_li>a]:text-[16px] text-white'>
         {menuItems.map((item, index) => (
-          <li key={index} className="mb-4">
+          <li key={index} className="mb-4 ">
             <div
               className='flex justify-between items-center w-full py-2 cursor-pointer select-none'
               onClick={() => toggleSubmenu(index)}
