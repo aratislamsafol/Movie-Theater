@@ -55,11 +55,10 @@ const Banner = () => {
 
       {/* Left Content With Image */}
       <div className="relative w-full lg:w-2/3 p-10 mt-2 flex flex-col justify-center overflow-hidden rounded-xl">
-        {/* Background image as <img> for proper aspect ratio */}
         <img
           src={activeMovie.image}
           alt={activeMovie.title}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-0 mask-r-from-60% lg:mask-r-from-40% mask-l-from-70%"
           loading="lazy"
           draggable={false}
         />
@@ -87,7 +86,7 @@ const Banner = () => {
                 prevIndex === 0 ? movies.length - 1 : prevIndex - 1
               )
             }
-            className="bg-black/70 text-white text-3xl p-2 rounded-full"
+            className="text-white text-3xl p-2 rounded-full w-5"
             aria-label="Previous"
           >
             ‹
@@ -97,7 +96,7 @@ const Banner = () => {
             onClick={() =>
               setActiveIndex((prevIndex) => (prevIndex + 1) % movies.length)
             }
-            className="bg-black/70 text-white text-3xl p-2 rounded-full"
+            className=" text-white text-3xl p-2 rounded-full"
             aria-label="Next"
           >
             ›
