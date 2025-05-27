@@ -1,3 +1,4 @@
+import Banner from "../components/Banner/Banner";
 import Header from "../components/Header/Header";
 const HomeLayout = () => {
     return (
@@ -8,8 +9,8 @@ const HomeLayout = () => {
                 <header>
                     <Header></Header>
                 </header>
-                <section className="banner">
-
+                <section className="banner px-3 md:px-4 lg:px-5">
+                    <Banner/>
                 </section>
                 <main>
                     {/* Top 10 Movies to Watch */}

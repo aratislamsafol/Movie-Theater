@@ -1,0 +1,20 @@
+/* scrollbar customization for the right thumbnails */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #222;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 3px;
+}
+
+/* Responsive text size for mobile */
+@media (max-width: 767px) {
+  .bg-black/70 h1 {
+    font-size: 2rem !important; 
+  }
+}
