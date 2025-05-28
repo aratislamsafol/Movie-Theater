@@ -15,7 +15,7 @@
       "rating": 8.5,
       "censor_rating": "PG-13",
       "trailer_url": "https://cdn.example.com/movies/galactic-odyssey/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/galactic-odyssey.jpg",
+      "cover_image": "https://i.postimg.cc/YSP63BTb/long.webp",
       "category": "Sci-Fi"
     },
     {
@@ -33,7 +33,7 @@
       "rating": 7.9,
       "censor_rating": "R",
       "trailer_url": "https://cdn.example.com/movies/silent-whisper/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/silent-whisper.jpg",
+      "cover_image": "https://i.postimg.cc/FK0rPjB8/rabbit.webp",
       "category": "Thriller"
     },
     {
@@ -51,7 +51,7 @@
       "rating": 8.1,
       "censor_rating": "PG",
       "trailer_url": "https://cdn.example.com/movies/taste-of-freedom/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/taste-of-freedom.jpg",
+      "cover_image": "https://i.postimg.cc/d1vqghM1/s1e4-island-of-secrets.webp",
       "category": "Drama"
     },
     {
@@ -69,7 +69,7 @@
       "rating": 8.2,
       "censor_rating": "R",
       "trailer_url": "https://cdn.example.com/movies/mystic-river/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/mystic-river.jpg",
+      "cover_image": "https://i.postimg.cc/PxZwQpW5/war-for-the-planet.webp",
       "category": "Drama"
     },
     {
@@ -87,7 +87,7 @@
       "rating": 8.7,
       "censor_rating": "PG-13",
       "trailer_url": "https://cdn.example.com/movies/cyber-frontier/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/cyber-frontier.jpg",
+      "cover_image": "https://i.postimg.cc/YSTFFfmP/vikings.webp",
       "category": "Action"
     },
     {
@@ -105,7 +105,7 @@
       "rating": 7.6,
       "censor_rating": "PG-13",
       "trailer_url": "https://cdn.example.com/movies/desert-mirage/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/desert-mirage.jpg",
+      "cover_image": "https://i.postimg.cc/8zKMpVkN/venom.webp",
       "category": "Adventure"
     },
     {
@@ -123,7 +123,7 @@
       "rating": 8.3,
       "censor_rating": "PG-13",
       "trailer_url": "https://cdn.example.com/movies/the-last-guardian/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/the-last-guardian.jpg",
+      "cover_image": "https://i.postimg.cc/x1TLVd26/toddler.webp",
       "category": "Fantasy"
     },
     {
@@ -141,7 +141,7 @@
       "rating": 7.8,
       "censor_rating": "R",
       "trailer_url": "https://cdn.example.com/movies/neon-city/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/neon-city.jpg",
+      "cover_image": "https://i.postimg.cc/XvrFXDXF/the-first-of-us.webp",
       "category": "Sci-Fi"
     },
     {
@@ -159,7 +159,7 @@
       "rating": 7.9,
       "censor_rating": "PG-13",
       "trailer_url": "https://cdn.example.com/movies/echoes-of-silence/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/echoes-of-silence.jpg",
+      "cover_image": "https://i.postimg.cc/PrHmK4Fs/s1e3-rivals-and-revelations.webp",
       "category": "Drama"
     },
     {
@@ -177,7 +177,7 @@
       "rating": 7.7,
       "censor_rating": "PG-13",
       "trailer_url": "https://cdn.example.com/movies/midnight-run/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/midnight-run.jpg",
+      "cover_image": "https://i.postimg.cc/v8frWjht/s1e2-hidden-allies.webp",
       "category": "Action"
     },
     {
@@ -195,7 +195,7 @@
       "rating": 8.0,
       "censor_rating": "PG",
       "trailer_url": "https://cdn.example.com/movies/forgotten-kingdom/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/forgotten-kingdom.jpg",
+      "cover_image": "https://i.postimg.cc/fycYDtyr/s1e1-setting-sail.webp",
       "category": "Adventure"
     },
     {
@@ -213,7 +213,7 @@
       "rating": 7.4,
       "censor_rating": "PG-13",
       "trailer_url": "https://cdn.example.com/movies/breaking-waves/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/breaking-waves.jpg",
+      "cover_image": "https://i.postimg.cc/KjSt6rGT/romance.webp",
       "category": "Drama"
     },
     {
@@ -231,7 +231,7 @@
       "rating": 8.4,
       "censor_rating": "PG-13",
       "trailer_url": "https://cdn.example.com/movies/shadow-phoenix/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/shadow-phoenix.jpg",
+      "cover_image": "https://i.postimg.cc/NMr1CPcY/pirates-ofdayones-orignal.webp",
       "category": "Action"
     },
     {
@@ -249,7 +249,7 @@
       "rating": 8.6,
       "censor_rating": "PG-13",
       "trailer_url": "https://cdn.example.com/movies/luminous/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/luminous.jpg",
+      "cover_image": "https://i.postimg.cc/2S2F1ZGp/mystery.webp",
       "category": "Sci-Fi"
     },
     {
@@ -267,7 +267,7 @@
       "rating": 8.3,
       "censor_rating": "R",
       "trailer_url": "https://cdn.example.com/movies/crimson-tide/trailer.mp4",
-      "cover_image": "https://cdn.example.com/images/crimson-tide.jpg",
+      "cover_image": "https://i.postimg.cc/3wNjmxfk/minions.webp",
       "category": "Action"
     }
   ]

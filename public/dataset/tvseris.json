@@ -13,7 +13,7 @@
       "actor_ids": [231, 302],
       "director": "Steven Moffat",
       "director_id": 101,
-      "cover_image": "https://cdn.example.com/images/the-time-travelers.jpg",
+      "cover_image": "https://i.postimg.cc/T3RJ29rq/lost-inst-space.webp",
       "seasons": [
         {
           "season_number": 1,
@@ -47,7 +47,7 @@
       "actor_ids": [303],
       "director": "Lisa Joy",
       "director_id": 102,
-      "cover_image": "https://cdn.example.com/images/urban-legends.jpg",
+      "cover_image": "https://i.postimg.cc/vTs6qYhL/action.webp",
       "seasons": [
         {
           "season_number": 1,
@@ -81,7 +81,7 @@
       "actor_ids": [304],
       "director": "Julia Child",
       "director_id": 103,
-      "cover_image": "https://cdn.example.com/images/culinary-journeys.jpg",
+      "cover_image": "https://i.postimg.cc/d3jZgbSM/adventure.webp",
       "seasons": [
         {
           "season_number": 1,
@@ -115,7 +115,7 @@
       "actor_ids": [305, 306],
       "director": "James Cameron",
       "director_id": 104,
-      "cover_image": "https://cdn.example.com/images/tech-tomorrow.jpg",
+      "cover_image": "https://i.postimg.cc/c4dnfJrd/animation.webp",
       "seasons": [
         {
           "season_number": 1,
@@ -149,7 +149,7 @@
       "actor_ids": [307],
       "director": "Ken Burns",
       "director_id": 105,
-      "cover_image": "https://cdn.example.com/images/historical-battles.jpg",
+      "cover_image": "https://i.postimg.cc/dtnT6Kyr/any-name.webp",
       "seasons": [
         {
           "season_number": 1,
@@ -183,7 +183,7 @@
       "actor_ids": [308],
       "director": "Jacques Cousteau",
       "director_id": 106,
-      "cover_image": "https://cdn.example.com/images/mysteries-of-the-deep.jpg",
+      "cover_image": "https://i.postimg.cc/Y26F4F2X/arrival.webp",
       "seasons": [
         {
           "season_number": 1,
@@ -217,7 +217,7 @@
       "actor_ids": [309],
       "director": "Frank Lloyd",
       "director_id": 107,
-      "cover_image": "https://cdn.example.com/images/architectural-marvels.jpg",
+      "cover_image": "https://i.postimg.cc/Cx1n66Gt/better-call-saul.webp",
       "seasons": [
         {
           "season_number": 1,
@@ -251,7 +251,7 @@
       "actor_ids": [310],
       "director": "Jane Goodall",
       "director_id": 108,
-      "cover_image": "https://cdn.example.com/images/wildlife-chronicles.jpg",
+      "cover_image": "https://i.postimg.cc/13jVxcMz/Crime.webp",
       "seasons": [
         {
           "season_number": 1,

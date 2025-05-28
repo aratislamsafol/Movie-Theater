@@ -58,7 +58,7 @@ const CarouselContainer = ({ deviceType }) => {
           </div>
         </Link>
          <Link to="/3" className='rounded'>
-          <img src={img3} className='w-full aspect-4/5 object-cover rounded-xl' alt="" />
+          <img src="https://i.postimg.cc/v8frWjht/s1e2-hidden-allies.webp" className='w-full aspect-4/5 object-cover rounded-xl' alt="" />
            <div className="absolute right-8 bottom-0 lg:-bottom-10 text-[3rem] md:text-[7rem] lg:text-[10rem] font-extrabold z-10 text-white">
             3
           </div>
