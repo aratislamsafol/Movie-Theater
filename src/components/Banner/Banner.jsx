@@ -52,7 +52,7 @@ const Banner = () => {
   const activeMovie = movies[activeIndex];
 
   return (
-    <div className="relative lg:flex h-[90vh] w-full bg-black text-white overflow-hidden mx-auto">
+    <div className="relative lg:flex w-full bg-black text-white overflow-hidden mx-auto">
 
       {/* Left Content With Image */}
       <div className="relative w-full lg:w-2/3 p-5 md:p-10 mt-2 flex flex-col justify-center overflow-hidden rounded-xl">
