@@ -24,3 +24,23 @@
 .humburger.open span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -5px);
 }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .humburger {
+        width: 24px;
+    }
+
+.humburger span {
+    width: 24px;
+    height: 2px;
+}
+.humburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.humburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -7px);
+}
+
+}
+

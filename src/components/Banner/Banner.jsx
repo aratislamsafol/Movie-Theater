@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import img1 from '../../assets/images/adventure.webp';
 import img2 from '../../assets/images/animation.webp';
 import img3 from '../../assets/images/action.webp';
+import { FaClock } from "react-icons/fa6";
 import './banner.css';
 
 const movies = [
@@ -44,7 +45,7 @@ const Banner = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % movies.length);
-    }, 6000); // every 6 seconds
+    }, 6000); 
     return () => clearInterval(interval);
   }, []);
 
@@ -54,28 +55,34 @@ const Banner = () => {
     <div className="relative lg:flex h-[90vh] w-full bg-black text-white overflow-hidden mx-auto">
 
       {/* Left Content With Image */}
-      <div className="relative w-full lg:w-2/3 p-10 mt-2 flex flex-col justify-center overflow-hidden rounded-xl">
-        <img
-          src={activeMovie.image}
-          alt={activeMovie.title}
-          className="absolute inset-0 w-full h-full object-cover z-0 mask-r-from-60% lg:mask-r-from-40% mask-l-from-70%"
-          loading="lazy"
-          draggable={false}
-        />
+      <div className="relative w-full lg:w-2/3 p-5 md:p-10 mt-2 flex flex-col justify-center overflow-hidden rounded-xl">
+        <img src={activeMovie.image} alt={activeMovie.title} className="absolute inset-0 w-full h-full object-cover z-0 mask-r-from-60% lg:mask-r-from-40% mask-l-from-70%" loading="lazy" draggable={false}/>
         {/* Overlay with content */}
-        <div className="relative bg-black/70 p-6 rounded-xl z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">{activeMovie.title}</h1>
-          <div className="flex items-center gap-3 mb-4">
-            <span className="bg-gray-700 px-2 py-1 rounded">NC-17</span>
-            <span className="text-yellow-400">⭐⭐⭐⭐⭐</span>
-            <span className="bg-yellow-600 px-2 py-1 rounded">IMDb</span>
-            <span>{activeMovie.duration}</span>
+        <div className="relative w-full bg-black/70 p-3 sm:p-4  md:p-6 rounded-xl z-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4">{activeMovie.title}</h1>
+          {/* Mobile View: Short Description with ... */}
+          <p className="mb-4 text-gray-300 md:hidden">
+            {activeMovie.description.length > 50
+              ? activeMovie.description.slice(0, 50) + "..."
+              : activeMovie.description}
+          </p>
+
+          {/* Medium and Above: Full Description */}
+          <p className="mb-4 text-gray-300 hidden md:block">
+            {activeMovie.description}
+          </p>
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-3 mb-4">
+            <div className='flex gap-2 items-center'>
+              <span className="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</span>
+             <span className="bg-yellow-600 px-2 py-1 rounded w-fit text-xs font-bold sm:text-base">IMDb</span>
+            </div>
+            <span className='text-sm md:text-base flex gap-1 items-center'><FaClock className=''/>  {activeMovie.duration}</span>
           </div>
-          <p className="mb-4 text-gray-300">{activeMovie.description}</p>
-          <p className="mb-2"><span className="text-red-400">Tags:</span> {activeMovie.tags}</p>
-          <p className="mb-2"><span className="text-pink-400">Genres:</span> {activeMovie.genres}</p>
-          <p className="mb-6"><span className="text-orange-400">Starring:</span> {activeMovie.starring}</p>
-          <button className="bg-red-600 hover:bg-red-700 transition px-6 py-3 rounded w-fit">Play Now</button>
+
+          <p className="mb-2 text-sm md:text-base"><span className="text-red-400 text-sm">Tags:</span> {activeMovie.tags}</p>
+          <p className="mb-2 "><span className="text-pink-400 text-sm md:text-base">Genres:</span> {activeMovie.genres}</p>
+          <p className="mb-3 sm:mb-4 md:mb-6 text-sm md:text-base"><span className="text-orange-400 ">Starring:</span> {activeMovie.starring}</p>
+          <button className="bg-red-600 hover:bg-red-700 transition px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base rounded w-fit">Play Now</button>
         </div>
 
         {/* Mobile Arrows for Manual Navigation */}
