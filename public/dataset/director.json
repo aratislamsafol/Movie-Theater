@@ -1,0 +1,82 @@
+{
+  "directors": [
+    {
+      "director_id": 1,
+      "name": "James Gunn",
+      "director_img": "https://cdn.example.com/directors/james_gunn.jpg",
+      "movies": [101]
+    },
+    {
+      "director_id": 2,
+      "name": "Denis Villeneuve",
+      "director_img": "https://cdn.example.com/directors/denis_villeneuve.jpg",
+      "movies": [102, 108, 114]
+    },
+    {
+      "director_id": 3,
+      "name": "Greta Gerwig",
+      "director_img": "https://cdn.example.com/directors/greta_gerwig.jpg",
+      "movies": [103]
+    },
+    {
+      "director_id": 4,
+      "name": "Clint Eastwood",
+      "director_img": "https://cdn.example.com/directors/clint_eastwood.jpg",
+      "movies": [104]
+    },
+    {
+      "director_id": 5,
+      "name": "The Wachowskis",
+      "director_img": "https://cdn.example.com/directors/wachowskis.jpg",
+      "movies": [105]
+    },
+    {
+      "director_id": 6,
+      "name": "Ridley Scott",
+      "director_img": "https://cdn.example.com/directors/ridley_scott.jpg",
+      "movies": [106]
+    },
+    {
+      "director_id": 7,
+      "name": "Peter Jackson",
+      "director_img": "https://cdn.example.com/directors/peter_jackson.jpg",
+      "movies": [107]
+    },
+    {
+      "director_id": 8,
+      "name": "David Fincher",
+      "director_img": "https://cdn.example.com/directors/david_fincher.jpg",
+      "movies": [109]
+    },
+    {
+      "director_id": 9,
+      "name": "Michael Bay",
+      "director_img": "https://cdn.example.com/directors/michael_bay.jpg",
+      "movies": [110]
+    },
+    {
+      "director_id": 10,
+      "name": "Guillermo del Toro",
+      "director_img": "https://cdn.example.com/directors/guillermo_del_toro.jpg",
+      "movies": [111]
+    },
+    {
+      "director_id": 11,
+      "name": "Derek Cianfrance",
+      "director_img": "https://cdn.example.com/directors/derek_cianfrance.jpg",
+      "movies": [112]
+    },
+    {
+      "director_id": 12,
+      "name": "Christopher McQuarrie",
+      "director_img": "https://cdn.example.com/directors/christopher_mcquarrie.jpg",
+      "movies": [113]
+    },
+    {
+      "director_id": 13,
+      "name": "Tony Scott",
+      "director_img": "https://cdn.example.com/directors/tony_scott.jpg",
+      "movies": [115]
+    }
+  ]
+}

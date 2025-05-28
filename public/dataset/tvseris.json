@@ -1,0 +1,276 @@
+{
+  "tv_series": [
+    {
+      "id": 3,
+      "title": "The Time Travelers",
+      "description": "A group of scientists discover a way to travel through time, facing unforeseen consequences.",
+      "release_date": "2020-05-10",
+      "rating": 8.0,
+      "censor_rating": "TV-14",
+      "genres": ["Sci-Fi", "Adventure"],
+      "tags": ["Time Travel", "Science"],
+      "cast": ["David Tennant", "Karen Gillan"],
+      "actor_ids": [231, 302],
+      "director": "Steven Moffat",
+      "director_id": 101,
+      "cover_image": "https://cdn.example.com/images/the-time-travelers.jpg",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "The Discovery",
+              "duration": "42m",
+              "video_url": "https://cdn.example.com/series/time-travelers/season1/episode1.mp4"
+            },
+            {
+              "episode_number": 2,
+              "title": "First Jump",
+              "duration": "45m",
+              "video_url": "https://cdn.example.com/series/time-travelers/season1/episode2.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Urban Legends",
+      "description": "Exploring the truth behind popular urban myths and legends.",
+      "release_date": "2019-09-18",
+      "rating": 7.5,
+      "censor_rating": "TV-PG",
+      "genres": ["Documentary", "Mystery"],
+      "tags": ["Myths", "Folklore"],
+      "cast": ["Narrator: Morgan Freeman"],
+      "actor_ids": [303],
+      "director": "Lisa Joy",
+      "director_id": 102,
+      "cover_image": "https://cdn.example.com/images/urban-legends.jpg",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "The Vanishing Hitchhiker",
+              "duration": "50m",
+              "video_url": "https://cdn.example.com/series/urban-legends/season1/episode1.mp4"
+            },
+            {
+              "episode_number": 2,
+              "title": "The Killer in the Backseat",
+              "duration": "48m",
+              "video_url": "https://cdn.example.com/series/urban-legends/season1/episode2.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Culinary Journeys",
+      "description": "Chefs travel the world exploring local cuisines and cultures.",
+      "release_date": "2021-03-12",
+      "rating": 8.3,
+      "censor_rating": "TV-G",
+      "genres": ["Travel", "Food"],
+      "tags": ["Cuisine", "Culture"],
+      "cast": ["Chef Anthony Bourdain"],
+      "actor_ids": [304],
+      "director": "Julia Child",
+      "director_id": 103,
+      "cover_image": "https://cdn.example.com/images/culinary-journeys.jpg",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "Flavors of Italy",
+              "duration": "40m",
+              "video_url": "https://cdn.example.com/series/culinary-journeys/season1/episode1.mp4"
+            },
+            {
+              "episode_number": 2,
+              "title": "Spices of India",
+              "duration": "42m",
+              "video_url": "https://cdn.example.com/series/culinary-journeys/season1/episode2.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Tech Tomorrow",
+      "description": "A look into emerging technologies that will shape our future.",
+      "release_date": "2022-01-05",
+      "rating": 8.6,
+      "censor_rating": "TV-PG",
+      "genres": ["Science", "Technology"],
+      "tags": ["Innovation", "Future"],
+      "cast": ["Elon Musk", "Neil deGrasse Tyson"],
+      "actor_ids": [305, 306],
+      "director": "James Cameron",
+      "director_id": 104,
+      "cover_image": "https://cdn.example.com/images/tech-tomorrow.jpg",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "AI Revolution",
+              "duration": "44m",
+              "video_url": "https://cdn.example.com/series/tech-tomorrow/season1/episode1.mp4"
+            },
+            {
+              "episode_number": 2,
+              "title": "Space Exploration",
+              "duration": "46m",
+              "video_url": "https://cdn.example.com/series/tech-tomorrow/season1/episode2.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Historical Battles",
+      "description": "Reenactments and analyses of significant battles in history.",
+      "release_date": "2018-07-22",
+      "rating": 7.9,
+      "censor_rating": "TV-14",
+      "genres": ["History", "War"],
+      "tags": ["Battles", "Strategy"],
+      "cast": ["Historian: Dan Carlin"],
+      "actor_ids": [307],
+      "director": "Ken Burns",
+      "director_id": 105,
+      "cover_image": "https://cdn.example.com/images/historical-battles.jpg",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "Battle of Hastings",
+              "duration": "52m",
+              "video_url": "https://cdn.example.com/series/historical-battles/season1/episode1.mp4"
+            },
+            {
+              "episode_number": 2,
+              "title": "Siege of Constantinople",
+              "duration": "50m",
+              "video_url": "https://cdn.example.com/series/historical-battles/season1/episode2.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Mysteries of the Deep",
+      "description": "Exploring the uncharted territories of the ocean.",
+      "release_date": "2020-11-11",
+      "rating": 8.4,
+      "censor_rating": "TV-G",
+      "genres": ["Nature", "Documentary"],
+      "tags": ["Ocean", "Exploration"],
+      "cast": ["Narrator: David Attenborough"],
+      "actor_ids": [308],
+      "director": "Jacques Cousteau",
+      "director_id": 106,
+      "cover_image": "https://cdn.example.com/images/mysteries-of-the-deep.jpg",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "The Mariana Trench",
+              "duration": "47m",
+              "video_url": "https://cdn.example.com/series/mysteries-of-the-deep/season1/episode1.mp4"
+            },
+            {
+              "episode_number": 2,
+              "title": "Sunken Cities",
+              "duration": "49m",
+              "video_url": "https://cdn.example.com/series/mysteries-of-the-deep/season1/episode2.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Architectural Marvels",
+      "description": "A journey through the world's most iconic structures.",
+      "release_date": "2019-04-15",
+      "rating": 7.8,
+      "censor_rating": "TV-G",
+      "genres": ["Architecture", "Travel"],
+      "tags": ["Structures", "History"],
+      "cast": ["Host: Sarah Johnson"],
+      "actor_ids": [309],
+      "director": "Frank Lloyd",
+      "director_id": 107,
+      "cover_image": "https://cdn.example.com/images/architectural-marvels.jpg",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "The Great Wall of China",
+              "duration": "43m",
+              "video_url": "https://cdn.example.com/series/architectural-marvels/season1/episode1.mp4"
+            },
+            {
+              "episode_number": 2,
+              "title": "The Eiffel Tower",
+              "duration": "45m",
+              "video_url": "https://cdn.example.com/series/architectural-marvels/season1/episode2.mp4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Wildlife Chronicles",
+      "description": "Documenting the lives of animals in their natural habitats.",
+      "release_date": "2021-06-30",
+      "rating": 9.0,
+      "censor_rating": "TV-G",
+      "genres": ["Nature", "Documentary"],
+      "tags": ["Animals", "Ecosystems"],
+      "cast": ["Narrator: Sigourney Weaver"],
+      "actor_ids": [310],
+      "director": "Jane Goodall",
+      "director_id": 108,
+      "cover_image": "https://cdn.example.com/images/wildlife-chronicles.jpg",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "Savannah Secrets",
+              "duration": "48m",
+              "video_url": "https://cdn.example.com/series/wildlife-chronicles/season1/episode1.mp4"
+            },
+            {
+              "episode_number": 2,
+              "title": "Jungle Giants",
+              "duration": "50m",
+              "video_url": "https://cdn.example.com/series/wildlife-chronicles/season1/episode2.mp4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
