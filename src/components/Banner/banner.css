@@ -1,20 +1,38 @@
-/* scrollbar customization for the right thumbnails */
+/* Gradient mask on banner image */
+.mask-r-from-60% {
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 60%, rgba(0,0,0,0));
+}
+
+/* Custom scrollbar for right thumbnails */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #222;
-}
-
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #444;
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
 }
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-/* Responsive text size for mobile */
-@media (max-width: 767px) {
-  .bg-black/70 h1 {
-    font-size: 2rem !important; 
+/* Active thumbnail ring */
+.ring-red-500 {
+  box-shadow: 0 0 0 3px #f87171; /* Tailwind red-500 */
+}
+
+/* Text shadows for readability */
+.relative h1, .relative p {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Button */
+button {
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .relative p {
+    font-size: 0.9rem;
   }
 }

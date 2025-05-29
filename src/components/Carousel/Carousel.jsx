@@ -1,10 +1,7 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import img1 from '../../assets/images/migration-portrait-.webp';
-import img2 from '../../assets/images/the-first-of-us-portrait.webp';
-import img3 from '../../assets/images/the-hunter-portrait.webp';
-import img4 from '../../assets/images/yoshi-portrait.webp';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 const responsive = {
   superLargeDesktop: {
@@ -26,6 +23,15 @@ const responsive = {
 };
 
 const CarouselContainer = ({ deviceType }) => {
+  const { movies, tvSeries } = useLoaderData();
+  const [allData, setAllData] = useState([]);
+
+  useEffect(() => {
+    const movieData = movies?.movies || [];
+    const tvData = tvSeries?.tv_series || [];
+    setAllData([...movieData, ...tvData]);
+  }, [movies, tvSeries]);
+
   return (
     <Carousel
       swipeable={false}
@@ -33,7 +39,7 @@ const CarouselContainer = ({ deviceType }) => {
       showDots={true}
       responsive={responsive}
       ssr={true}
-      infinite={true}
+      infinite={false}
       autoPlay={deviceType !== "mobile"}
       autoPlaySpeed={2000}
       keyBoardControl={true}
@@ -45,36 +51,14 @@ const CarouselContainer = ({ deviceType }) => {
       dotListClass="custom-dot-list-style"
       itemClass="px-2" 
     >
-        <Link to="/1" className='rounded'>
-          <img src={img1} className='w-full aspect-4/5 object-cover rounded-xl' alt="" />
+        {
+          [...allData].sort((a, b)=> b.rating- a.rating).slice(0, 10).map((data, index) => <Link key={data.id} to="" className='rounded'>
+          <img src={data.cover_image} className='w-full aspect-4/5 object-cover rounded-xl' alt="" />
           <div className="absolute right-8 bottom-0 lg:-bottom-10 text-[3rem] md:text-[7rem] lg:text-[10rem] font-extrabold z-10 text-white">
-            1
+            {index+1}
           </div>
-        </Link>
-        <Link to="/2" className='rounded'>
-          <img src={img2} className='w-full aspect-4/5 object-cover rounded-xl' alt="" />
-          <div className="absolute right-8 bottom-0 lg:-bottom-10 text-[3rem] md:text-[7rem] lg:text-[10rem] font-extrabold z-10 text-white">
-            2
-          </div>
-        </Link>
-         <Link to="/3" className='rounded'>
-          <img src="https://i.postimg.cc/v8frWjht/s1e2-hidden-allies.webp" className='w-full aspect-4/5 object-cover rounded-xl' alt="" />
-           <div className="absolute right-8 bottom-0 lg:-bottom-10 text-[3rem] md:text-[7rem] lg:text-[10rem] font-extrabold z-10 text-white">
-            3
-          </div>
-        </Link>
-        <Link to="/4" className='rounded'>
-          <img src={img4} className='w-full aspect-4/5 object-cover rounded-xl' alt="" />
-           <div className="absolute right-8 bottom-0 lg:-bottom-10 text-[3rem] md:text-[7rem] lg:text-[10rem] font-extrabold z-10 text-white">
-            4
-          </div>
-        </Link>
-        <Link to="/5" className='rounded'>
-          <img src={img4} className='w-full aspect-4/5 object-cover rounded-xl' alt="" />
-           <div className="absolute right-8 bottom-0 lg:-bottom-10 text-[3rem] md:text-[7rem] lg:text-[10rem] font-extrabold z-10 text-white">
-            4
-          </div>
-        </Link>
+        </Link>)
+        }
     </Carousel>
   );
 };
