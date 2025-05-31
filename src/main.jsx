@@ -8,7 +8,7 @@ import OfCanvasProvider from './provider/OfCanvasProvider';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <OfCanvasProvider>
-      <RouterProvider router={router} />
+      <RouterProvider router={router} fallbackElement={<div>Loading...</div>}/>
     </OfCanvasProvider>
   </StrictMode>,
 )

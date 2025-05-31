@@ -12,7 +12,7 @@ const Banner = () => {
   const [thumbnailPage, setThumbnailPage] = useState(0);
   const thumbnailsPerPage = 3;
 
-  const bannerRef = useRef(null); // banner animation ref
+  const bannerRef = useRef(null); 
 
   useEffect(() => {
     const movieData = movies?.movies || [];
@@ -103,7 +103,7 @@ const Banner = () => {
       </div>
 
       {/* Right Thumbnails */}
-      <div className="hidden lg:flex lg:flex-col md:w-1/4 pr-4 pt-2 overflow-hidden">
+      <div className="hidden lg:flex lg:flex-col md:w-1/4 pt-2 overflow-hidden">
         <div className="flex justify-between items-center mb-2 px-4">
           <button
             onClick={() => setThumbnailPage((prev) => Math.max(prev - 1, 0))}
