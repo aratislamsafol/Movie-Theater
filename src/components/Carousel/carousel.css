@@ -1,3 +1,15 @@
-.hover{
-    transform: scale(1.5) !important;
+
+@media (max-width: 768px) {
+  .slick-arrow {
+    display: none !important;
+  }
+}
+.carousel-container .slick-slide {
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+/* writing-mode for vertical text */
+.writing-vertical {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 }

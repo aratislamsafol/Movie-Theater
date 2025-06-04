@@ -22,13 +22,62 @@
               "episode_number": 1,
               "title": "The Discovery",
               "duration": "42m",
-              "video_url": "https://cdn.example.com/series/time-travelers/season1/episode1.mp4"
+              "video_url": "https://cdn.example.com/series/time-travelers/s1e1.mp4",
+              "cover_image": "https://i.postimg.cc/2Sm2bmfW/deadpool.webp"
             },
             {
               "episode_number": 2,
               "title": "First Jump",
               "duration": "45m",
-              "video_url": "https://cdn.example.com/series/time-travelers/season1/episode2.mp4"
+              "video_url": "https://cdn.example.com/series/time-travelers/s1e2.mp4",
+              "cover_image": "https://i.postimg.cc/bJGTcw17/dinoosaur.webp"
+            },
+            {
+              "episode_number": 3,
+              "title": "Temporal Rift",
+              "duration": "47m",
+              "video_url": "https://cdn.example.com/series/time-travelers/s1e3.mp4",
+              "cover_image": "https://i.postimg.cc/5NF5tVdk/ep3.webp"
+            },
+            {
+              "episode_number": 4,
+              "title": "Echoes of the Past",
+              "duration": "49m",
+              "video_url": "https://cdn.example.com/series/time-travelers/s1e4.mp4",
+              "cover_image": "https://i.postimg.cc/dVmzdYkV/ep4.webp"
+            }
+          ]
+        },
+        {
+          "season_number": 2,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "New Futures",
+              "duration": "44m",
+              "video_url": "https://cdn.example.com/series/time-travelers/s2e1.mp4",
+              "cover_image": "https://i.postimg.cc/0Nyz0j7f/ep1.webp"
+            },
+            {
+              "episode_number": 2,
+              "title": "Lost Coordinates",
+              "duration": "46m",
+              "video_url": "https://cdn.example.com/series/time-travelers/s2e2.mp4",
+              "cover_image": "https://i.postimg.cc/VvQvLzTY/ep2.webp"
+            },
+            {
+              "episode_number": 3,
+              "title": "Parallel Minds",
+              "duration": "48m",
+              "video_url": "https://cdn.example.com/series/time-travelers/s2e3.mp4",
+              "cover_image": "https://i.postimg.cc/fRmXRXTV/ep3.webp"
+            },
+            {
+              "episode_number": 4,
+              "title": "End Loop",
+              "duration": "50m",
+              "video_url": "https://cdn.example.com/series/time-travelers/s2e4.mp4",
+              "cover_image": "https://i.postimg.cc/NjCg2W6W/ep4.webp"
             }
           ]
         }
@@ -56,217 +105,62 @@
               "episode_number": 1,
               "title": "The Vanishing Hitchhiker",
               "duration": "50m",
-              "video_url": "https://cdn.example.com/series/urban-legends/season1/episode1.mp4"
+              "video_url": "https://cdn.example.com/series/urban-legends/s1e1.mp4",
+              "cover_image": "https://i.postimg.cc/1z7HjqV0/giirek.webp"
             },
             {
               "episode_number": 2,
               "title": "The Killer in the Backseat",
               "duration": "48m",
-              "video_url": "https://cdn.example.com/series/urban-legends/season1/episode2.mp4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Culinary Journeys",
-      "description": "Chefs travel the world exploring local cuisines and cultures.",
-      "release_date": "2021-03-12",
-      "rating": 8.3,
-      "censor_rating": "TV-G",
-      "genres": ["Travel", "Food"],
-      "tags": ["Cuisine", "Culture"],
-      "cast": ["Chef Anthony Bourdain"],
-      "actor_ids": [304],
-      "director": "Julia Child",
-      "director_id": 103,
-      "cover_image": "https://i.postimg.cc/d3jZgbSM/adventure.webp",
-      "seasons": [
-        {
-          "season_number": 1,
-          "episodes": [
-            {
-              "episode_number": 1,
-              "title": "Flavors of Italy",
-              "duration": "40m",
-              "video_url": "https://cdn.example.com/series/culinary-journeys/season1/episode1.mp4"
+              "video_url": "https://cdn.example.com/series/urban-legends/s1e2.mp4",
+              "cover_image": "https://i.postimg.cc/rwJg5b8P/horror.webp"
             },
             {
-              "episode_number": 2,
-              "title": "Spices of India",
-              "duration": "42m",
-              "video_url": "https://cdn.example.com/series/culinary-journeys/season1/episode2.mp4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Tech Tomorrow",
-      "description": "A look into emerging technologies that will shape our future.",
-      "release_date": "2022-01-05",
-      "rating": 8.6,
-      "censor_rating": "TV-PG",
-      "genres": ["Science", "Technology"],
-      "tags": ["Innovation", "Future"],
-      "cast": ["Elon Musk", "Neil deGrasse Tyson"],
-      "actor_ids": [305, 306],
-      "director": "James Cameron",
-      "director_id": 104,
-      "cover_image": "https://i.postimg.cc/c4dnfJrd/animation.webp",
-      "seasons": [
-        {
-          "season_number": 1,
-          "episodes": [
-            {
-              "episode_number": 1,
-              "title": "AI Revolution",
-              "duration": "44m",
-              "video_url": "https://cdn.example.com/series/tech-tomorrow/season1/episode1.mp4"
-            },
-            {
-              "episode_number": 2,
-              "title": "Space Exploration",
+              "episode_number": 3,
+              "title": "The Choking Doberman",
               "duration": "46m",
-              "video_url": "https://cdn.example.com/series/tech-tomorrow/season1/episode2.mp4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "title": "Historical Battles",
-      "description": "Reenactments and analyses of significant battles in history.",
-      "release_date": "2018-07-22",
-      "rating": 7.9,
-      "censor_rating": "TV-14",
-      "genres": ["History", "War"],
-      "tags": ["Battles", "Strategy"],
-      "cast": ["Historian: Dan Carlin"],
-      "actor_ids": [307],
-      "director": "Ken Burns",
-      "director_id": 105,
-      "cover_image": "https://i.postimg.cc/dtnT6Kyr/any-name.webp",
-      "seasons": [
-        {
-          "season_number": 1,
-          "episodes": [
-            {
-              "episode_number": 1,
-              "title": "Battle of Hastings",
-              "duration": "52m",
-              "video_url": "https://cdn.example.com/series/historical-battles/season1/episode1.mp4"
+              "video_url": "https://cdn.example.com/series/urban-legends/s1e3.mp4",
+              "cover_image": "https://i.postimg.cc/yY4pFJJd/ep3.webp"
             },
             {
-              "episode_number": 2,
-              "title": "Siege of Constantinople",
-              "duration": "50m",
-              "video_url": "https://cdn.example.com/series/historical-battles/season1/episode2.mp4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "title": "Mysteries of the Deep",
-      "description": "Exploring the uncharted territories of the ocean.",
-      "release_date": "2020-11-11",
-      "rating": 8.4,
-      "censor_rating": "TV-G",
-      "genres": ["Nature", "Documentary"],
-      "tags": ["Ocean", "Exploration"],
-      "cast": ["Narrator: David Attenborough"],
-      "actor_ids": [308],
-      "director": "Jacques Cousteau",
-      "director_id": 106,
-      "cover_image": "https://i.postimg.cc/Y26F4F2X/arrival.webp",
-      "seasons": [
-        {
-          "season_number": 1,
-          "episodes": [
-            {
-              "episode_number": 1,
-              "title": "The Mariana Trench",
-              "duration": "47m",
-              "video_url": "https://cdn.example.com/series/mysteries-of-the-deep/season1/episode1.mp4"
-            },
-            {
-              "episode_number": 2,
-              "title": "Sunken Cities",
+              "episode_number": 4,
+              "title": "Bloody Mary",
               "duration": "49m",
-              "video_url": "https://cdn.example.com/series/mysteries-of-the-deep/season1/episode2.mp4"
+              "video_url": "https://cdn.example.com/series/urban-legends/s1e4.mp4",
+              "cover_image": "https://i.postimg.cc/G3s7pg8N/ep4.webp"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "title": "Architectural Marvels",
-      "description": "A journey through the world's most iconic structures.",
-      "release_date": "2019-04-15",
-      "rating": 7.8,
-      "censor_rating": "TV-G",
-      "genres": ["Architecture", "Travel"],
-      "tags": ["Structures", "History"],
-      "cast": ["Host: Sarah Johnson"],
-      "actor_ids": [309],
-      "director": "Frank Lloyd",
-      "director_id": 107,
-      "cover_image": "https://i.postimg.cc/Cx1n66Gt/better-call-saul.webp",
-      "seasons": [
+        },
         {
-          "season_number": 1,
+          "season_number": 2,
           "episodes": [
             {
               "episode_number": 1,
-              "title": "The Great Wall of China",
-              "duration": "43m",
-              "video_url": "https://cdn.example.com/series/architectural-marvels/season1/episode1.mp4"
+              "title": "The Mirror Man",
+              "duration": "52m",
+              "video_url": "https://cdn.example.com/series/urban-legends/s2e1.mp4",
+              "cover_image": "https://i.postimg.cc/3xkqzTGH/ep1.webp"
             },
             {
               "episode_number": 2,
-              "title": "The Eiffel Tower",
-              "duration": "45m",
-              "video_url": "https://cdn.example.com/series/architectural-marvels/season1/episode2.mp4"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "title": "Wildlife Chronicles",
-      "description": "Documenting the lives of animals in their natural habitats.",
-      "release_date": "2021-06-30",
-      "rating": 9.0,
-      "censor_rating": "TV-G",
-      "genres": ["Nature", "Documentary"],
-      "tags": ["Animals", "Ecosystems"],
-      "cast": ["Narrator: Sigourney Weaver"],
-      "actor_ids": [310],
-      "director": "Jane Goodall",
-      "director_id": 108,
-      "cover_image": "https://i.postimg.cc/13jVxcMz/Crime.webp",
-      "seasons": [
-        {
-          "season_number": 1,
-          "episodes": [
-            {
-              "episode_number": 1,
-              "title": "Savannah Secrets",
-              "duration": "48m",
-              "video_url": "https://cdn.example.com/series/wildlife-chronicles/season1/episode1.mp4"
-            },
-            {
-              "episode_number": 2,
-              "title": "Jungle Giants",
+              "title": "The Haunted School",
               "duration": "50m",
-              "video_url": "https://cdn.example.com/series/wildlife-chronicles/season1/episode2.mp4"
+              "video_url": "https://cdn.example.com/series/urban-legends/s2e2.mp4",
+              "cover_image": "https://i.postimg.cc/VNsM4TfN/ep2.webp"
+            },
+            {
+              "episode_number": 3,
+              "title": "The Ringing Phone",
+              "duration": "47m",
+              "video_url": "https://cdn.example.com/series/urban-legends/s2e3.mp4",
+              "cover_image": "https://i.postimg.cc/W3jqsKSM/ep3.webp"
+            },
+            {
+              "episode_number": 4,
+              "title": "Voices in the Dark",
+              "duration": "49m",
+              "video_url": "https://cdn.example.com/series/urban-legends/s2e4.mp4",
+              "cover_image": "https://i.postimg.cc/5tVRZmNT/ep4.webp"
             }
           ]
         }

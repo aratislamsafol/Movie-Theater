@@ -65,7 +65,7 @@ const CustomCarousel = ({ allData }) => {
   return (
     <div className="relative">  
       <div
-        className="w-full h-screen overflow-hidden select-none"
+        className="w-full overflow-hidden select-none"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
@@ -78,7 +78,7 @@ const CustomCarousel = ({ allData }) => {
           style={{ transform: `translateX(-${index * 100}%)` }}
         >
           {allData.map((item, idx) => (
-            <div key={idx} className="min-w-full h-full relative">
+            <div key={idx} className="min-w-full md:h-full h-[24rem] relative">
               <img
                 src={item.cover_image}
                 alt={item.title || "slide"}
