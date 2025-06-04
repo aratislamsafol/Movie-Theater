@@ -3,7 +3,6 @@ import { IoMdTime } from "react-icons/io";
 
 const Tab = ({ tabContent, topicsName }) => {
   const [tab, setTab] = useState(tabContent[0]);
-  console.log(tabContent)
   // When tabContent changes, reset tab to first
   useEffect(() => {
     if (tabContent?.length > 0) {

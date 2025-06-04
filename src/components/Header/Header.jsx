@@ -3,12 +3,14 @@ import Logo from "../Logo/Logo";
 import Menu from "../Menu/Menu";
 import { CiSearch } from "react-icons/ci";
 import OffCanvas from '../OffCanvas/OffCanvas';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { OffCanvasContext } from '../../provider/OfCanvasProvider';
 import { RiShoppingCartLine } from "react-icons/ri";
+import Modal from '../Modal/Modal';
 
 const Header = () => {
     const {isOpen} = useContext(OffCanvasContext);
+    const [showModal, setShowModal] = useState(false);
     return (
         <div className=''>
             <div className="p-3 md:p-4 lg:p-5">
@@ -20,7 +22,7 @@ const Header = () => {
                         <Menu/>
                     </div>
                     <div className="col-span-1 sm:col-span-2 md:col-span-1 flex gap-[6px] sm:gap-4 justify-self-end items-center">
-                        <CiSearch className='text-white text-xl sm:text-2xl cursor-pointer'/>
+                        <button type='button' onClick={() => setShowModal(true)}><CiSearch className='text-white text-xl sm:text-2xl cursor-pointer'/></button> 
                         <RiShoppingCartLine className='text-white text-base sm:text-xl cursor-pointer'/>
                         <button type="button" className='btn   btn-sm md:btn md:bg-red-800 md:text-white bg-red-800 text-sm md:text-base sm:text-base outline-none border-none md:border-none text-white'>Login</button>
                         <div className='justify-self-end'>
@@ -32,6 +34,14 @@ const Header = () => {
             </div>
             {/* offCanvas */}
             {isOpen && <OffCanvas />}
+            {/* using Modal For Search */}
+            <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+                <input
+                type="text"
+                placeholder="Type to search..."
+                className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded md:rounded-xl text-lg focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-sm"
+                />
+            </Modal>
         </div>
 
 
