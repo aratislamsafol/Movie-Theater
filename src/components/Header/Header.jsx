@@ -8,11 +8,12 @@ import { OffCanvasContext } from '../../provider/OfCanvasProvider';
 import { RiShoppingCartLine } from "react-icons/ri";
 import Modal from '../Modal/Modal';
 
-const Header = () => {
+const Header = ({location}) => {
     const {isOpen} = useContext(OffCanvasContext);
     const [showModal, setShowModal] = useState(false);
+    
     return (
-        <div className=''>
+        <div className="bg-black">
             <div className="p-3 md:p-4 lg:p-5">
                 <div className="grid grid-cols-2 sm:grid-cols-5 md:grid-cols-3 justify-between items-center">
                     <div className="col-span-1 sm:col-span-3 md:col-span-1">

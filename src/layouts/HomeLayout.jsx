@@ -49,7 +49,7 @@ const HomeLayout = () => {
 
     return (
         // wrapper
-        <div className="">
+        <div className="bg-black">
             {/* container */}
             <div className="w-21/22 mx-auto">
                 <section className="banner px-3 md:px-4 lg:px-5">
@@ -122,7 +122,7 @@ const HomeLayout = () => {
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Recommended for You</h2>
                             <Link to="" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
-                        <CarouselContainer className="px-2" allData={allData.movies.sort((a, b) => b.rating - a.rating)} indexItem={false} detailsHover={true} aspectCss={true}  showDots={true} autoPlaySpeed={2400}/>
+                        <CarouselContainer className="px-2" allData={allData.movies.sort((a, b) => b.rating - a.rating)} indexItem={false} detailsHover={true} aspectCss={true}  showDots={false} autoPlaySpeed={2400}/>
                     </div>
                 </main>
             </div>

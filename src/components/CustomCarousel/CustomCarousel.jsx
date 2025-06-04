@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
 import { FaClock } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const CustomCarousel = ({ allData }) => {
   const [index, setIndex] = useState(0);
@@ -115,9 +116,9 @@ const CustomCarousel = ({ allData }) => {
                 <p className="mb-3 sm:mb-4 md:mb-6 text-sm md:text-base">
                   <span className="text-orange-400">Starring:</span> {item.cast}
                 </p>
-                <button className="bg-red-600 hover:bg-red-700 transition px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base rounded w-fit">
+                <Link to={`item/${item.id}`} className="bg-red-600 hover:bg-red-700 transition px-3 sm:px-4 md:px-6 py-2 md:py-3 text-sm md:text-base rounded w-fit">
                   Play Now
-                </button>
+                </Link>
               </div>
             </div>
           ))}
