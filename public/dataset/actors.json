@@ -2,243 +2,243 @@
   "actors": [
     {
       "id": 201,
-      "name": "Chris Pratt",
-      "image": "https://i.postimg.cc/fT6Q6VmN/ryan-pierce.webp",
+      "name": "John Cena",
+      "cover_image": "https://i.postimg.cc/fT6Q6VmN/ryan-pierce.webp",
       "filmography": [101]
     },
     {
       "id": 202,
-      "name": "Zoe Saldana",
-      "image": "https://i.postimg.cc/tRvjNSg7/michael-fox.webp",
+      "name": "John Abraham ",
+      "cover_image": "https://i.postimg.cc/tRvjNSg7/michael-fox.webp",
       "filmography": [101]
     },
     {
       "id": 203,
-      "name": "Dave Bautista",
-      "image": "https://i.postimg.cc/TYyX7Vy0/ruby-scott.webp",
+      "name": "Maria Rodriguez",
+      "cover_image": "https://i.postimg.cc/TYyX7Vy0/ruby-scott.webp",
       "filmography": [101]
     },
     {
       "id": 204,
-      "name": "Natalie Portman",
-      "image": "https://i.postimg.cc/j21Yq51y/mark-smith.webp",
+      "name": "Olivia Foster",
+      "cover_image": "https://i.postimg.cc/j21Yq51y/mark-smith.webp",
       "filmography": [102]
     },
     {
       "id": 205,
       "name": "Jake Gyllenhaal",
-      "image": "https://i.postimg.cc/vTTdd90Q/jordan-grant.webp",
+      "cover_image": "https://i.postimg.cc/vTTdd90Q/jordan-grant.webp",
       "filmography": [102]
     },
     {
       "id": 206,
       "name": "Emma Stone",
-      "image": "https://i.postimg.cc/50nMGpq7/joker-portrait.webp",
+      "cover_image": "https://i.postimg.cc/50nMGpq7/joker-portrait.webp",
       "filmography": [103]
     },
     {
       "id": 207,
-      "name": "Stanley Tucci",
-      "image": "https://i.postimg.cc/XJVbQtFB/john-wick-portrait.webp",
+      "name": "Shilla",
+      "cover_image": "https://i.postimg.cc/XJVbQtFB/john-wick-portrait.webp",
       "filmography": [103]
     },
     {
       "id": 208,
-      "name": "Sean Penn",
-      "image": "https://i.postimg.cc/bv0P0qGj/jeff-bridges.webp",
+      "name": "Tomas Edison",
+      "cover_image": "https://i.postimg.cc/bv0P0qGj/jeff-bridges.webp",
       "filmography": [104]
     },
     {
       "id": 209,
-      "name": "Tim Robbins",
-      "image": "https://i.postimg.cc/9fHVqDQp/james-stewart.webp",
+      "name": "Olivia Foster",
+      "cover_image": "https://i.postimg.cc/9fHVqDQp/james-stewart.webp",
       "filmography": [104]
     },
     {
       "id": 210,
-      "name": "Keanu Reeves",
-      "image": "https://i.postimg.cc/L812Xt25/jack-nicholson.webp",
+      "name": "Arat Islam",
+      "cover_image": "https://i.postimg.cc/L812Xt25/jack-nicholson.webp",
       "filmography": [105]
     },
     {
       "id": 211,
       "name": "Carrie-Anne Moss",
-      "image": "https://i.postimg.cc/tJvp1DsZ/charles-melton.webp",
+      "cover_image": "https://i.postimg.cc/tJvp1DsZ/charles-melton.webp",
       "filmography": [105]
     },
     {
       "id": 212,
       "name": "Tom Hardy",
-      "image": "https://i.postimg.cc/wT36KKrh/batter-caill-portrait.webp",
+      "cover_image": "https://i.postimg.cc/wT36KKrh/batter-caill-portrait.webp",
       "filmography": [106]
     },
     {
       "id": 213,
-      "name": "Jessica Chastain",
-      "image": "https://i.postimg.cc/bYmzFYmy/ava-monroe.webp",
+      "name": "Gerry Kasparove",
+      "cover_image": "https://i.postimg.cc/bYmzFYmy/ava-monroe.webp",
       "filmography": [106]
     },
     {
       "id": 214,
-      "name": "Idris Elba",
-      "image": "https://i.postimg.cc/kXZ7q1rL/any-name-portrait.webp",
+      "name": "Marlon Magnus",
+      "cover_image": "https://i.postimg.cc/kXZ7q1rL/any-name-portrait.webp",
       "filmography": [107]
     },
     {
       "id": 215,
-      "name": "Eva Green",
-      "image": "https://i.postimg.cc/rswqF7w2/another-danger-portrait.webp",
+      "name": "Mikhali Tal",
+      "cover_image": "https://i.postimg.cc/rswqF7w2/another-danger-portrait.webp",
       "filmography": [107]
     },
     {
       "id": 216,
       "name": "Rami Malek",
-      "image": "https://i.postimg.cc/fT6Q6VmN/ryan-pierce.webp",
+      "cover_image": "https://i.postimg.cc/fT6Q6VmN/ryan-pierce.webp",
       "filmography": [108]
     },
     {
       "id": 217,
       "name": "Tessa Thompson",
-      "image": "https://i.postimg.cc/TYyX7Vy0/ruby-scott.webp",
+      "cover_image": "https://i.postimg.cc/TYyX7Vy0/ruby-scott.webp",
       "filmography": [108]
     },
     {
       "id": 218,
       "name": "Rachel McAdams",
-      "image": "https://i.postimg.cc/tRvjNSg7/michael-fox.webp",
+      "cover_image": "https://i.postimg.cc/tRvjNSg7/michael-fox.webp",
       "filmography": [109]
     },
     {
       "id": 219,
       "name": "Mark Ruffalo",
-      "image": "https://i.postimg.cc/vTTdd90Q/jordan-grant.webp",
+      "cover_image": "https://i.postimg.cc/vTTdd90Q/jordan-grant.webp",
       "filmography": [109]
     },
     {
       "id": 220,
       "name": "Chris Hemsworth",
-      "image": "https://i.postimg.cc/50nMGpq7/joker-portrait.webp",
+      "cover_image": "https://i.postimg.cc/50nMGpq7/joker-portrait.webp",
       "filmography": [110]
     },
     {
       "id": 221,
       "name": "Emily Blunt",
-      "image": "https://i.postimg.cc/XJVbQtFB/john-wick-portrait.webp",
+      "cover_image": "https://i.postimg.cc/XJVbQtFB/john-wick-portrait.webp",
       "filmography": [110]
     },
     {
       "id": 222,
       "name": "Oscar Isaac",
-      "image": "https://i.postimg.cc/bv0P0qGj/jeff-bridges.webp",
+      "cover_image": "https://i.postimg.cc/bv0P0qGj/jeff-bridges.webp",
       "filmography": [111]
     },
     {
       "id": 223,
-      "name": "Lupita Nyong'o",
-      "image": "https://i.postimg.cc/9fHVqDQp/james-stewart.webp",
+      "name": "Heri Broken",
+      "cover_image": "https://i.postimg.cc/9fHVqDQp/james-stewart.webp",
       "filmography": [111]
     },
     {
       "id": 224,
       "name": "Miles Teller",
-      "image": "https://i.postimg.cc/L812Xt25/jack-nicholson.webp",
+      "cover_image": "https://i.postimg.cc/L812Xt25/jack-nicholson.webp",
       "filmography": [112]
     },
     {
       "id": 225,
-      "name": "Shailene Woodley",
-      "image": "https://i.postimg.cc/tJvp1DsZ/charles-melton.webp",
+      "name": "The Rock",
+      "cover_image": "https://i.postimg.cc/tJvp1DsZ/charles-melton.webp",
       "filmography": [112]
     },
     {
       "id": 226,
-      "name": "Tom Cruise",
-      "image": "https://i.postimg.cc/wT36KKrh/batter-caill-portrait.webp",
+      "name": "Jony Sins",
+      "cover_image": "https://i.postimg.cc/wT36KKrh/batter-caill-portrait.webp",
       "filmography": [113]
     },
     {
       "id": 227,
       "name": "Jennifer Connelly",
-      "image": "https://i.postimg.cc/bYmzFYmy/ava-monroe.webp",
+      "cover_image": "https://i.postimg.cc/bYmzFYmy/ava-monroe.webp",
       "filmography": [113]
     },
     {
       "id": 228,
       "name": "Benedict Cumberbatch",
-      "image": "https://i.postimg.cc/kXZ7q1rL/any-name-portrait.webpg",
+      "cover_image": "https://i.postimg.cc/kXZ7q1rL/any-name-portrait.webpg",
       "filmography": [114]
     },
     {
       "id": 229,
       "name": "Scarlett Johansson",
-      "image": "https://i.postimg.cc/rswqF7w2/another-danger-portrait.webp",
+      "cover_image": "https://i.postimg.cc/rswqF7w2/another-danger-portrait.webp",
       "filmography": [114]
     },
     {
       "id": 230,
-      "name": "Denzel Washington",
-      "image": "https://i.postimg.cc/fT6Q6VmN/ryan-pierce.webp",
+      "name": "Albert Einstine",
+      "cover_image": "https://i.postimg.cc/fT6Q6VmN/ryan-pierce.webp",
       "filmography": [115]
     },
     {
       "id": 231,
       "name": "Gene Hackman",
-      "image": "https://i.postimg.cc/TYyX7Vy0/ruby-scott.webp",
+      "cover_image": "https://i.postimg.cc/TYyX7Vy0/ruby-scott.webp",
       "filmography": [115, 3]
     },
     
     {
       "id": 302,
-      "name": "Karen Gillan",
-      "image": "https://i.postimg.cc/tRvjNSg7/michael-fox.webp",
+      "name": "Ronaldinho",
+      "cover_image": "https://i.postimg.cc/tRvjNSg7/michael-fox.webp",
       "filmography": [3]
     },
     {
       "id": 303,
-      "name": "Morgan Freeman",
-      "image": "https://i.postimg.cc/j21Yq51y/mark-smith.webp",
+      "name": "Lionel Messi",
+      "cover_image": "https://i.postimg.cc/j21Yq51y/mark-smith.webp",
       "filmography": [4]
     },
     {
       "id": 304,
-      "name": "Anthony Bourdain",
-      "image": "https://i.postimg.cc/vTTdd90Q/jordan-grant.webp",
+      "name": "Naymar",
+      "cover_image": "https://i.postimg.cc/vTTdd90Q/jordan-grant.webp",
       "filmography": [5]
     },
     {
       "id": 305,
       "name": "Elon Musk",
-      "image": "https://i.postimg.cc/50nMGpq7/joker-portrait.webp",
+      "cover_image": "https://i.postimg.cc/50nMGpq7/joker-portrait.webp",
       "filmography": [6]
     },
     {
       "id": 306,
-      "name": "Neil deGrasse Tyson",
-      "image": "https://i.postimg.cc/XJVbQtFB/john-wick-portrait.webp",
+      "name": "Fata Kesto",
+      "cover_image": "https://i.postimg.cc/XJVbQtFB/john-wick-portrait.webp",
       "filmography": [6]
     },
     {
       "id": 307,
       "name": "Dan Carlin",
-      "image": "https://i.postimg.cc/bv0P0qGj/jeff-bridges.webp",
+      "cover_image": "https://i.postimg.cc/bv0P0qGj/jeff-bridges.webp",
       "filmography": [7]
     },
     {
       "id": 308,
       "name": "David Attenborough",
-      "image": "https://i.postimg.cc/9fHVqDQp/james-stewart.webp",
+      "cover_image": "https://i.postimg.cc/9fHVqDQp/james-stewart.webp",
       "filmography": [8]
     },
     {
       "id": 309,
       "name": "Sarah Johnson",
-      "image": "https://i.postimg.cc/L812Xt25/jack-nicholson.webp",
+      "cover_image": "https://i.postimg.cc/L812Xt25/jack-nicholson.webp",
       "filmography": [9]
     },
     {
       "id": 310,
       "name": "Sigourney Weaver",
-      "image": "https://i.postimg.cc/tJvp1DsZ/charles-melton.webp",
+      "cover_image": "https://i.postimg.cc/tJvp1DsZ/charles-melton.webp",
       "filmography": [10]
     }
   ]

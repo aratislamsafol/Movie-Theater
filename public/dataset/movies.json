@@ -16,7 +16,8 @@
       "censor_rating": "PG-13",
       "trailer_url": "https://www.youtube.com/watch?v=AlhHGUfCYw4",
       "cover_image": "https://i.postimg.cc/YSP63BTb/long.webp",
-      "category": "Sci-Fi"
+      "category": "Sci-Fi",
+      "relatedProductIds": ["P1001", "P1005", "P1008", "P1010", "P1015", "P1024", "P1029", "P1030"]
     },
     {
       "id": 102,
@@ -34,7 +35,8 @@
       "censor_rating": "R",
       "trailer_url": "https://www.youtube.com/watch?v=Ox8ZLF6cGM0",
       "cover_image": "https://i.postimg.cc/FK0rPjB8/rabbit.webp",
-      "category": "Thriller"
+      "category": "Thriller",
+      "relatedProductIds": ["P1003", "P1007", "P1014", "P1019", "P1020", "P1022", "P1026", "P1027", "P1028", "P1030"]
     },
     {
       "id": 103,
@@ -52,7 +54,8 @@
       "censor_rating": "PG",
       "trailer_url": "https://www.youtube.com/watch?v=x--N03NO130",
       "cover_image": "https://i.postimg.cc/d1vqghM1/s1e4-island-of-secrets.webp",
-      "category": "Drama"
+      "category": "Drama",
+      "relatedProductIds": ["P1004", "P1006", "P1018", "P1020", "P1028", "P1030"]
     },
     {
       "id": 104,
@@ -70,7 +73,8 @@
       "censor_rating": "R",
       "trailer_url": "https://www.youtube.com/watch?v=W7NktJhrRYQ",
       "cover_image": "https://i.postimg.cc/PxZwQpW5/war-for-the-planet.webp",
-      "category": "Drama"
+      "category": "Drama",
+      "relatedProductIds": ["P1001", "P1007", "P1011", "P1016", "P1019", "P1022", "P1025", "P1028", "P1029"]
     },
     {
       "id": 105,
@@ -81,14 +85,15 @@
       "genres": ["Action", "Sci-Fi"],
       "tags": ["Hackers", "Technology", "Future"],
       "cast": ["Keanu Reeves", "Carrie-Anne Moss"],
-      "actor_ids": [210, 211],
+      "actor_ids": [210, 211, 212, 214, 220, 306],
       "director": "The Wachowskis",
       "director_id": 5,
       "rating": 8.7,
       "censor_rating": "PG-13",
       "trailer_url": "https://www.youtube.com/watch?v=Fo3yRLLrXQA",
       "cover_image": "https://i.postimg.cc/YSTFFfmP/vikings.webp",
-      "category": "Action"
+      "category": "Action",
+      "relatedProductIds": ["P1003", "P1009", "P1012", "P1013", "P1015", "P1017", "P1021", "P1023", "P1024", "P1025", "P1026", "P1027"]
     },
     {
       "id": 106,
@@ -106,7 +111,8 @@
       "censor_rating": "PG-13",
       "trailer_url": "https://www.youtube.com/watch?v=8uJVoj-GS0o",
       "cover_image": "https://i.postimg.cc/8zKMpVkN/venom.webp",
-      "category": "Adventure"
+      "category": "Adventure",
+      "relatedProductIds": ["P1006", "P1011", "P1014", "P1016", "P1017", "P1020", "P1029"]
     },
     {
       "id": 107,
@@ -124,7 +130,8 @@
       "censor_rating": "PG-13",
       "trailer_url": "https://www.youtube.com/watch?v=iybmEKbFknc",
       "cover_image": "https://i.postimg.cc/x1TLVd26/toddler.webp",
-      "category": "Fantasy"
+      "category": "Fantasy",
+      "relatedProductIds": ["P1004", "P1005", "P1008", "P1010", "P1015", "P1019", "P1021", "P1022", "P1024", "P1028", "P1030"]
     },
     {
       "id": 108,
@@ -142,7 +149,8 @@
       "censor_rating": "R",
       "trailer_url": "https://www.youtube.com/watch?v=0kz5vEqdaSc",
       "cover_image": "https://i.postimg.cc/XvrFXDXF/the-first-of-us.webp",
-      "category": "Sci-Fi"
+      "category": "Sci-Fi",
+      "relatedProductIds": ["P1003", "P1009", "P1012", "P1013", "P1015", "P1025"]
     },
     {
       "id": 109,
@@ -160,7 +168,8 @@
       "censor_rating": "PG-13",
       "trailer_url": "https://www.youtube.com/watch?v=Ifo_eIOreNw",
       "cover_image": "https://i.postimg.cc/PrHmK4Fs/s1e3-rivals-and-revelations.webp",
-      "category": "Drama"
+      "category": "Drama",
+      "relatedProductIds": ["P1001", "P1006", "P1011", "P1016", "P1019", "P1020", "P1022", "P1028"]
     },
     {
       "id": 110,
@@ -178,7 +187,8 @@
       "censor_rating": "PG-13",
       "trailer_url": "https://www.youtube.com/watch?v=n3Rf3SsN0M0",
       "cover_image": "https://i.postimg.cc/v8frWjht/s1e2-hidden-allies.webp",
-      "category": "Action"
+      "category": "Action",
+      "relatedProductIds": ["P1002", "P1007", "P1010", "P1014", "P1017", "P1021", "P1023", "P1026", "P1027", "P1030"]
     },
     {
       "id": 111,
@@ -196,7 +206,8 @@
       "censor_rating": "PG",
       "trailer_url": "https://www.youtube.com/watch?v=cdM8pUba8Nk",
       "cover_image": "https://i.postimg.cc/fycYDtyr/s1e1-setting-sail.webp",
-      "category": "Adventure"
+      "category": "Adventure",
+      "relatedProductIds": ["P1004", "P1008", "P1011", "P1018", "P1020", "P1024", "P1029"]
     },
     {
       "id": 112,
@@ -214,7 +225,8 @@
       "censor_rating": "PG-13",
       "trailer_url": "https://www.youtube.com/watch?v=rVPdrR0u63A",
       "cover_image": "https://i.postimg.cc/KjSt6rGT/romance.webp",
-      "category": "Drama"
+      "category": "Drama",
+      "relatedProductIds": ["P1005", "P1009", "P1012", "P1016", "P1017", "P1021", "P1023", "P1025", "P1026"]
     },
     {
       "id": 113,
@@ -232,7 +244,8 @@
       "censor_rating": "PG-13",
       "trailer_url": "https://www.youtube.com/watch?v=2pg4QOqW-aI",
       "cover_image": "https://i.postimg.cc/NMr1CPcY/pirates-ofdayones-orignal.webp",
-      "category": "Action"
+      "category": "Action",
+      "relatedProductIds": ["P1002", "P1003", "P1010", "P1013", "P1014", "P1015", "P1018", "P1022", "P1024", "P1027", "P1030"]
     },
     {
       "id": 114,
@@ -250,7 +263,8 @@
       "censor_rating": "PG-13",
       "trailer_url": "https://www.veed.io/view/c1e3576a-a0d0-4eab-ab30-b8bbb7de8a95?panel=share",
       "cover_image": "https://i.postimg.cc/2S2F1ZGp/mystery.webp",
-      "category": "Sci-Fi"
+      "category": "Sci-Fi",
+      "relatedProductIds": ["P1008", "P1010", "P1015", "P1016", "P1025", "P1026"]
     },
     {
       "id": 115,
@@ -268,7 +282,8 @@
       "censor_rating": "R",
       "trailer_url": "https://www.youtube.com/watch?v=x--N03NO130",
       "cover_image": "https://i.postimg.cc/3wNjmxfk/minions.webp",
-      "category": "Action"
+      "category": "Action",
+      "relatedProductIds": ["P1001", "P1004", "P1009", "P1011", "P1017", "P1020", "P1023", "P1027", "P1028", "P1030"]
     }
   ]
 }

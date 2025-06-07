@@ -13,7 +13,7 @@
     "rating": 8.5,
     "censor_rating": "PG-13",
     "trailer_url": "https://cdn.example.com/movies/galactic-odyssey/trailer.mp4",
-    "cover_image": "https://i.postimg.cc/fbRCCKyT/john-wick.webp",
+    "cover_image": "https://i.postimg.cc/YSP63BTb/long.webp",
     "category": "Sci-Fi"
   },
   {
@@ -30,7 +30,7 @@
     "rating": 8.9,
     "censor_rating": "R",
     "trailer_url": "https://cdn.example.com/movies/shadowverse/trailer.mp4",
-    "cover_image": "https://i.postimg.cc/1zX9Nsqb/shadowverse.webp",
+    "cover_image": "https://i.postimg.cc/KjSt6rGT/romance.webp",
     "category": "Thriller"
   },
   {
@@ -46,7 +46,7 @@
     "director_id": 3,
     "rating": 8.2,
     "censor_rating": "PG-13",
-    "trailer_url": "https://cdn.example.com/movies/kingdom-of-sand/trailer.mp4",
+    "trailer_url": "https://i.postimg.cc/x1TLVd26/toddler.webp",
     "cover_image": "https://i.postimg.cc/sDCJqyxL/kung-fu-panda.webp",
     "category": "Fantasy"
   },
@@ -64,7 +64,7 @@
     "rating": 8.7,
     "censor_rating": "R",
     "trailer_url": "https://cdn.example.com/movies/neon-requiem/trailer.mp4",
-    "cover_image": "https://i.postimg.cc/3wNjmxfk/minions.webp",
+    "cover_image": "https://i.postimg.cc/KjSt6rGT/romance.webp",
     "category": "Sci-Fi"
   },
   {

@@ -3,43 +3,43 @@
     {
       "director_id": 1,
       "name": "James Gunn",
-      "director_img": "https://cdn.example.com/directors/james_gunn.jpg",
+      "director_img": "https://i.postimg.cc/rFVsSSM8/director1.webp",
       "movies": [101]
     },
     {
       "director_id": 2,
       "name": "Denis Villeneuve",
-      "director_img": "https://cdn.example.com/directors/denis_villeneuve.jpg",
+      "director_img": "https://i.postimg.cc/GpymcKJj/director2.webp",
       "movies": [102, 108, 114]
     },
     {
       "director_id": 3,
       "name": "Greta Gerwig",
-      "director_img": "https://cdn.example.com/directors/greta_gerwig.jpg",
+      "director_img": "https://i.postimg.cc/PxnrNDSn/director6.jpg",
       "movies": [103]
     },
     {
       "director_id": 4,
       "name": "Clint Eastwood",
-      "director_img": "https://cdn.example.com/directors/clint_eastwood.jpg",
+      "director_img": "https://i.postimg.cc/bwMvcWbJ/director5.jpg",
       "movies": [104]
     },
     {
       "director_id": 5,
       "name": "The Wachowskis",
-      "director_img": "https://cdn.example.com/directors/wachowskis.jpg",
+      "director_img": "https://i.postimg.cc/YCjSPMvZ/director4.jpg",
       "movies": [105]
     },
     {
       "director_id": 6,
       "name": "Ridley Scott",
-      "director_img": "https://cdn.example.com/directors/ridley_scott.jpg",
+      "director_img": "https://i.postimg.cc/wTwvF7jD/director3.webp",
       "movies": [106]
     },
     {
       "director_id": 7,
       "name": "Peter Jackson",
-      "director_img": "https://cdn.example.com/directors/peter_jackson.jpg",
+      "director_img": "https://i.postimg.cc/GpymcKJj/director2.webp",
       "movies": [107]
     },
     {
@@ -51,31 +51,31 @@
     {
       "director_id": 9,
       "name": "Michael Bay",
-      "director_img": "https://cdn.example.com/directors/michael_bay.jpg",
+      "director_img": "https://i.postimg.cc/FKyXWBVw/director9.jpg",
       "movies": [110]
     },
     {
       "director_id": 10,
       "name": "Guillermo del Toro",
-      "director_img": "https://cdn.example.com/directors/guillermo_del_toro.jpg",
+      "director_img": "https://i.postimg.cc/9f5jBhZG/director8.avif",
       "movies": [111]
     },
     {
       "director_id": 11,
       "name": "Derek Cianfrance",
-      "director_img": "https://cdn.example.com/directors/derek_cianfrance.jpg",
+      "director_img": "https://i.postimg.cc/pXSvp8dc/director7.jpg",
       "movies": [112]
     },
     {
       "director_id": 12,
       "name": "Christopher McQuarrie",
-      "director_img": "https://cdn.example.com/directors/christopher_mcquarrie.jpg",
+      "director_img": "https://i.postimg.cc/YCmHg9Gr/director10.jpg",
       "movies": [113]
     },
     {
       "director_id": 13,
       "name": "Tony Scott",
-      "director_img": "https://cdn.example.com/directors/tony_scott.jpg",
+      "director_img": "https://i.postimg.cc/wTwvF7jD/director3.webp",
       "movies": [115]
     }
   ]

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose, children, bgColor, positionDesign, width = "w-fit"}) => {
   const modalRef = useRef();
   const overlayRef = useRef();
   const [shouldRender, setShouldRender] = useState(isOpen);
@@ -54,11 +54,11 @@ const Modal = ({ isOpen, onClose, children }) => {
     <div
       ref={overlayRef}
       onClick={handleOverlayClick}
-      className="fixed inset-0 z-50 bg-black/70 flex justify-center items-start pt-20 px-4"
+      className={`fixed inset-0 z-50 bg-black/70 flex justify-center ${positionDesign ? positionDesign:"items-start pt-20 px-4"}`}
     >
       <div
         ref={modalRef}
-        className="bg-gray-100 w-full max-w-2xl rounded-md md:rounded-xl p-4 shadow-2xl relative"
+        className={`${bgColor? bgColor: "bg-gray-200"} ${width} rounded-md md:rounded-lg p-4 max-w-[1200px] shadow-2xl relative`}
       >
         <button
           onClick={onClose}

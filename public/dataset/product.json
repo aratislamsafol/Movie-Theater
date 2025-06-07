@@ -1,0 +1,274 @@
+{
+  "products": [
+    {
+      "id": "P1001",
+      "name": "BlackBow",
+      "price": 199,
+      "details": "Elegant black satin bow, perfect for formal events.",
+      "image": "https://i.postimg.cc/v8XbP2sg/662466-Product-0-I-638294803803960419.webp",
+      "quantity": 150,
+      "production_country": "Bangladesh"
+    },
+    {
+      "id": "P1002",
+      "name": "Logo T-Shirt",
+      "price": 599,
+      "details": "Premium cotton T-shirt with printed logo design.",
+      "image": "https://i.postimg.cc/DZTnNt0s/tshirt.jpg",
+      "quantity": 300,
+      "production_country": "India"
+    },
+    {
+      "id": "P1003",
+      "name": "Phone Cover",
+      "price": 299,
+      "details": "Shockproof silicone cover compatible with most smartphones.",
+      "image": "https://i.postimg.cc/C1sSpmn2/Scream-Horror-Movie-88716.jpg",
+      "quantity": 500,
+      "production_country": "China"
+    },
+    {
+      "id": "P1004",
+      "name": "Magic Hat",
+      "price": 899,
+      "details": "Classic magician's black hat with hidden compartments.",
+      "image": "https://i.postimg.cc/cJYdXsx0/Point-Break-T-Shirt-Movie-Bodhi-Action-Funny-Classic-T-Shirt-1.jpg",
+      "quantity": 80,
+      "production_country": "USA"
+    },
+    {
+      "id": "P1005",
+      "name": "Graphic Hoodie",
+      "price": 1299,
+      "details": "Warm hoodie with abstract graphic print, unisex design.",
+      "image": "https://i.postimg.cc/zG4JCL1x/movie-logo-over-the-top-t-shirt-master-500x750-crop-center.webp",
+      "quantity": 120,
+      "production_country": "Vietnam"
+    },
+    {
+      "id": "P1006",
+      "name": "Canvas Tote Bag",
+      "price": 349,
+      "details": "Eco-friendly tote bag made of natural canvas fabric.",
+      "image": "https://i.postimg.cc/jdgqjg30/images-9.jpg",
+      "quantity": 250,
+      "production_country": "Bangladesh"
+    },
+    {
+      "id": "P1007",
+      "name": "Leather Wallet",
+      "price": 699,
+      "details": "Genuine leather wallet with multiple card slots.",
+      "image": "https://i.postimg.cc/9XBF6FGf/images-7.jpg",
+      "quantity": 200,
+      "production_country": "Italy"
+    },
+    {
+      "id": "P1008",
+      "name": "Smart Water Bottle",
+      "price": 1599,
+      "details": "Hydration tracking smart bottle with temperature display.",
+      "image": "https://i.postimg.cc/90cXDvjV/images-5.jpg",
+      "quantity": 75,
+      "production_country": "Japan"
+    },
+    {
+      "id": "P1009",
+      "name": "Bluetooth Speaker",
+      "price": 1290,
+      "details": "Portable speaker with deep bass and 10-hour battery life.",
+      "image": "https://i.postimg.cc/Hn3YXBpM/images-6.jpg",
+      "quantity": 110,
+      "production_country": "South Korea"
+    },
+    {
+      "id": "P1010",
+      "name": "LED Desk Lamp",
+      "price": 799,
+      "details": "Adjustable brightness LED lamp with touch control.",
+      "image": "https://i.postimg.cc/85RPPT9t/images-4.jpg",
+      "quantity": 130,
+      "production_country": "China"
+    },
+    {
+      "id": "P1011",
+      "name": "Travel Backpack",
+      "price": 1499,
+      "details": "Water-resistant backpack with laptop compartment.",
+      "image": "https://i.postimg.cc/9FFFC5pY/images-8.jpg",
+      "quantity": 90,
+      "production_country": "Bangladesh"
+    },
+    {
+      "id": "P1012",
+      "name": "Wireless Mouse",
+      "price": 499,
+      "details": "Ergonomic wireless mouse with silent clicks.",
+      "image": "https://i.postimg.cc/jSnTSsJP/images-2.jpg",
+      "quantity": 300,
+      "production_country": "Malaysia"
+    },
+    {
+      "id": "P1013",
+      "name": "Gaming Keyboard",
+      "price": 1899,
+      "details": "Mechanical RGB keyboard with fast response keys.",
+      "image": "https://i.postimg.cc/dtxvF7DJ/images-1.jpg",
+      "quantity": 60,
+      "production_country": "Taiwan"
+    },
+    {
+      "id": "P1014",
+      "name": "Sunglasses",
+      "price": 799,
+      "details": "UV400 protected polarized sunglasses for men & women.",
+      "image": "https://i.postimg.cc/0QRyszWz/images-3.jpg",
+      "quantity": 180,
+      "production_country": "Italy"
+    },
+    {
+      "id": "P1015",
+      "name": "Noise Cancelling Headphones",
+      "price": 2999,
+      "details": "Over-ear headphones with active noise cancellation.",
+      "image": "https://i.postimg.cc/YCvrL6T4/images.jpg",
+      "quantity": 55,
+      "production_country": "Germany"
+    },
+    {
+      "id": "P1016",
+      "name": "Fitness Tracker Band",
+      "price": 999,
+      "details": "Track your steps, heart rate, and sleep quality.",
+      "image": "https://i.postimg.cc/Y0X7h03f/d8b26ca1f7e26e985227cdce9593f08e-jpg-960x960q80-jpg.webp",
+      "quantity": 150,
+      "production_country": "USA"
+    },
+    {
+      "id": "P1017",
+      "name": "Mini Tripod",
+      "price": 349,
+      "details": "Compact tripod for mobile & small cameras.",
+      "image": "https://i.postimg.cc/fyWZzmxR/black-red-bow-1-150kb-02.jpg",
+      "quantity": 170,
+      "production_country": "India"
+    },
+    {
+      "id": "P1018",
+      "name": "Instant Coffee Jar",
+      "price": 249,
+      "details": "100g premium roasted instant coffee.",
+      "image": "https://i.postimg.cc/DyZFRQvC/81-I4xu-GORRL.jpg",
+      "quantity": 400,
+      "production_country": "Brazil"
+    },
+    {
+      "id": "P1019",
+      "name": "Notebook Set",
+      "price": 199,
+      "details": "Set of 3 ruled notebooks with artistic covers.",
+      "image": "https://i.postimg.cc/YCvrL6T4/images.jpg",
+      "quantity": 350,
+      "production_country": "Bangladesh"
+    },
+    {
+      "id": "P1020",
+      "name": "Ceramic Mug",
+      "price": 299,
+      "details": "Microwave-safe ceramic mug with print design.",
+      "image": "https://i.postimg.cc/jdgqjg30/images-9.jpg",
+      "quantity": 230,
+      "production_country": "Thailand"
+    },
+    {
+      "id": "P1021",
+      "name": "Laptop Sleeve",
+      "price": 649,
+      "details": "Protective sleeve for 13-15 inch laptops.",
+      "image": "https://i.postimg.cc/9FFFC5pY/images-8.jpg",
+      "quantity": 100,
+      "production_country": "Vietnam"
+    },
+    {
+      "id": "P1022",
+      "name": "Wall Art Poster",
+      "price": 399,
+      "details": "Modern art printed on premium matte paper.",
+      "image": "https://i.postimg.cc/DZTnNt0s/tshirt.jpg",
+      "quantity": 180,
+      "production_country": "India"
+    },
+    {
+      "id": "P1023",
+      "name": "Fidget Spinner",
+      "price": 149,
+      "details": "Stress relief spinner toy for all ages.",
+      "image": "https://i.postimg.cc/fyWZzmxR/black-red-bow-1-150kb-02.jpg",
+      "quantity": 500,
+      "production_country": "China"
+    },
+    {
+      "id": "P1024",
+      "name": "Digital Alarm Clock",
+      "price": 899,
+      "details": "LED display clock with snooze and temperature.",
+      "image": "https://i.postimg.cc/DyZFRQvC/81-I4xu-GORRL.jpg",
+      "quantity": 70,
+      "production_country": "Japan"
+    },
+    {
+      "id": "P1025",
+      "name": "USB Flash Drive 64GB",
+      "price": 499,
+      "details": "Fast USB 3.0 storage for all your files.",
+      "image": "https://i.postimg.cc/DZTnNt0s/tshirt.jpg",
+      "quantity": 280,
+      "production_country": "Singapore"
+    },
+    {
+      "id": "P1026",
+      "name": "Phone Ring Holder",
+      "price": 129,
+      "details": "360° rotatable metal phone ring grip.",
+      "image": "https://i.postimg.cc/Hn3YXBpM/images-6.jpg",
+      "quantity": 400,
+      "production_country": "China"
+    },
+    {
+      "id": "P1027",
+      "name": "Cable Organizer",
+      "price": 199,
+      "details": "Silicone cable holder for desktops.",
+      "image": "https://i.postimg.cc/Y0X7h03f/d8b26ca1f7e26e985227cdce9593f08e-jpg-960x960q80-jpg.webp",
+      "quantity": 300,
+      "production_country": "Malaysia"
+    },
+    {
+      "id": "P1028",
+      "name": "Table Mat Set",
+      "price": 449,
+      "details": "4-piece dining table mat set with woven texture.",
+      "image": "https://i.postimg.cc/fyWZzmxR/black-red-bow-1-150kb-02.jpg",
+      "quantity": 120,
+      "production_country": "Bangladesh"
+    },
+    {
+      "id": "P1029",
+      "name": "Keychain Light",
+      "price": 99,
+      "details": "Mini LED flashlight with keychain ring.",
+      "image": "https://i.postimg.cc/9XBF6FGf/images-7.jpg",
+      "quantity": 600,
+      "production_country": "India"
+    },
+    {
+      "id": "P1030",
+      "name": "Reusable Water Bottle",
+      "price": 399,
+      "details": "750ml BPA-free eco-friendly water bottle.",
+      "image": "https://i.postimg.cc/9FFFC5pY/images-8.jpg",
+      "quantity": 350,
+      "production_country": "Nepal"
+    }
+  ]
+}

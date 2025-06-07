@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer';
 const Root = () => {
     const location = useLocation();
     return (
-        <div className='w-full max-w-[1440px] bg-black'>
+        <div className='w-full max-w-[1440px] bg-black mx-auto'>
             <Header location={location}/>
             <Outlet/>
             <Footer/>
