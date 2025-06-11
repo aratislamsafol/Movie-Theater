@@ -3,6 +3,7 @@ import HomeLayout from "../layouts/HomeLayout";
 import Loader from "../utils/Loader";
 import Root from "../Root/Root";
 import SinglePage from "../pages/SinglePage";
+import Login from "../pages/login/Login";
 const router= createBrowserRouter([
   {
     path: "/",
@@ -19,7 +20,10 @@ const router= createBrowserRouter([
         loader: Loader('/dataset/movies.json','/dataset/tvseris.json')
       }
     ]
-    
+  },
+  {
+    path: "login",
+    element: <Login />
   }
 ])
 export default router;

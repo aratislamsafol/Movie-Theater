@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
     "daisyui": "^5.0.37",
+    "firebase": "^11.9.0",
     "gsap": "^3.13.0",
     "lodash": "^4.17.21",
     "react": "^19.1.0",

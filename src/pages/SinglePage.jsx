@@ -322,6 +322,8 @@ const SinglePage = () => {
                 </div>
                 <CarouselContainer className="px-2" allData={upComingMovie} indexItem={false} detailsHover={true} aspectCss={true}  showDots={false} autoPlaySpeed={2400} productHover = {false}/>
             </div>
+
+            
         </>
         
     );
