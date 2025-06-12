@@ -4,6 +4,9 @@ import Loader from "../utils/Loader";
 import Root from "../Root/Root";
 import SinglePage from "../pages/SinglePage";
 import Login from "../pages/login/Login";
+import AuthProvider from "../provider/AuthProvider";
+import Registration from "../pages/Registration/Registration";
+import AuthLayout from "../layouts/AuthLayout";
 const router= createBrowserRouter([
   {
     path: "/",
@@ -22,8 +25,18 @@ const router= createBrowserRouter([
     ]
   },
   {
-    path: "login",
-    element: <Login />
+    path:'auth',
+    element:<AuthLayout></AuthLayout>, 
+    children: [
+      {
+        path: '/auth/login',
+        element: <Login/>
+      },
+      {
+        path: '/auth/registraion',
+        element: <Registration/>
+      }
+    ]
   }
 ])
 export default router;

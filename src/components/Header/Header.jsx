@@ -7,6 +7,7 @@ import { useContext, useState } from 'react';
 import { OffCanvasContext } from '../../provider/OfCanvasProvider';
 import { RiShoppingCartLine } from "react-icons/ri";
 import Modal from '../Modal/Modal';
+import { Link } from 'react-router-dom';
 
 const Header = ({location}) => {
     const {isOpen} = useContext(OffCanvasContext);
@@ -25,7 +26,7 @@ const Header = ({location}) => {
                     <div className="col-span-1 sm:col-span-2 md:col-span-1 flex gap-[6px] sm:gap-4 justify-self-end items-center">
                         <button type='button' onClick={() => setShowModal(true)}><CiSearch className='text-white text-xl sm:text-2xl cursor-pointer'/></button> 
                         <RiShoppingCartLine className='text-white text-base sm:text-xl cursor-pointer'/>
-                        <button type="button" className='btn   btn-sm md:btn md:bg-red-800 md:text-white bg-red-800 text-sm md:text-base sm:text-base outline-none border-none md:border-none text-white'>Login</button>
+                        <Link to="/auth/login" className='btn   btn-sm md:btn md:bg-red-800 md:text-white bg-red-800 text-sm md:text-base sm:text-base outline-none border-none md:border-none text-white'>Login</Link>
                         <div className='justify-self-end'>
                             <Humburger />
                         </div>

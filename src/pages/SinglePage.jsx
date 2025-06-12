@@ -92,6 +92,7 @@ const SinglePage = () => {
                         <h4 key={index} className="text-sm md:text-base">{item}</h4>
                     ))}
                 </div>
+                
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">{targetData.title}</h1>
                  <p className="text-xs hidden md:block md:text-sm font-thin w-3/6">{targetData.description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsa impedit itaque provident veniam, quisquam, aperiam voluptatibus corrupti modi distinctio autem beatae libero animi. Enim sapiente, consectetur aperiam sint cumque ipsam harum hic maxime eligendi cum laboriosam quam illo est architecto consequatur qui asperiores voluptate perferendis expedita explicabo? Quidem, dolorum.</p>
                 <p className="md:hidden text-xs md:text-sm font-thin w-3/6">{targetData.description.slice(0,30)} ...</p>
