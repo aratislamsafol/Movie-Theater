@@ -60,9 +60,7 @@ const Registration = () => {
             setUser(res.user);
             updateUserProfile({displayName: name, photoURL: url})
             .then(() =>{
-                console.log("Profile updated, navigating now...");
                 navigate("/");
-                  console.log("Navigation triggered");
             })
             .catch(err=> {
                  const message = getCustomErrorMessage(err.code);

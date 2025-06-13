@@ -7,6 +7,9 @@ import Login from "../pages/login/Login";
 import AuthProvider from "../provider/AuthProvider";
 import Registration from "../pages/Registration/Registration";
 import AuthLayout from "../layouts/AuthLayout";
+import SubScription from "../pages/subScription/SubScription";
+import SubScriptionLayout from "../layouts/SubScriptionLayout";
+import CheckOut from "../pages/checkout/CheckOut";
 const router= createBrowserRouter([
   {
     path: "/",
@@ -35,6 +38,21 @@ const router= createBrowserRouter([
       {
         path: '/auth/registraion',
         element: <Registration/>
+      }
+    ]
+  }, 
+  {
+    path: 'pricing',
+    element: <SubScriptionLayout />,
+    children: [
+      {
+        path: 'pricing-plan',
+        element: <SubScription/>,
+        loader: Loader('/dataset/pricing.json'),
+      },
+      {
+        path: '/pricing/checkout',
+        element: <CheckOut></CheckOut>
       }
     ]
   }

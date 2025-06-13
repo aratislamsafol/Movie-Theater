@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Basic Plan",
+    "price": "$8.99",
+    "duration": "per month",
+    "quality": "Good",
+    "resolution": "480p",
+    "devices": {
+      "watchOnTV": true,
+      "watchOnLaptop": true,
+      "watchOnMobile": true,
+      "watchOnTablet": true
+    },
+    "simultaneousStreams": 1,
+    "download": false,
+    "ads": false
+  },
+  {
+    "name": "Standard Plan",
+    "price": "$13.99",
+    "duration": "per month",
+    "quality": "Better",
+    "resolution": "1080p",
+    "devices": {
+      "watchOnTV": true,
+      "watchOnLaptop": true,
+      "watchOnMobile": true,
+      "watchOnTablet": true
+    },
+    "simultaneousStreams": 2,
+    "download": true,
+    "ads": false,
+    "offer": "20%"
+  },
+  {
+    "name": "Premium Plan",
+    "price": "$17.99",
+    "duration": "per month",
+    "quality": "Best",
+    "resolution": "4K + HDR",
+    "devices": {
+      "watchOnTV": true,
+      "watchOnLaptop": true,
+      "watchOnMobile": true,
+      "watchOnTablet": true
+    },
+    "simultaneousStreams": 4,
+    "download": true,
+    "ads": false
+  }
+]

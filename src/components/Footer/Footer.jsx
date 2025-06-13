@@ -3,7 +3,7 @@ import logo from '../../assets/logos/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-10 p-3 md:p-4 lg:p-5">
+    <footer className="bg-black text-white pt-10 p-3 md:p-4 lg:p-5 text-start">
       <div className="grid md:grid-cols-5 gap-8 pb-10 border-b border-gray-700">
         
         {/* Brand & Contact */}
