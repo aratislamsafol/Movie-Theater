@@ -10,6 +10,7 @@ import AuthLayout from "../layouts/AuthLayout";
 import SubScription from "../pages/subScription/SubScription";
 import SubScriptionLayout from "../layouts/SubScriptionLayout";
 import CheckOut from "../pages/checkout/CheckOut";
+import UserProfile from "../pages/ProfilePage";
 const router= createBrowserRouter([
   {
     path: "/",
@@ -55,6 +56,10 @@ const router= createBrowserRouter([
         element: <CheckOut></CheckOut>
       }
     ]
-  }
+  },
+  {
+        path: '/profile',
+        element: <UserProfile></UserProfile>
+      }
 ])
 export default router;

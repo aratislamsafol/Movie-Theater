@@ -8,10 +8,13 @@ import { OffCanvasContext } from '../../provider/OfCanvasProvider';
 import { RiShoppingCartLine } from "react-icons/ri";
 import Modal from '../Modal/Modal';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Header = ({location}) => {
+    const {user, logOut} = useContext(AuthContext);
     const {isOpen} = useContext(OffCanvasContext);
     const [showModal, setShowModal] = useState(false);
+    const [dropDown, setDropDown] = useState(false);
     
     return (
         <div className="bg-black">
@@ -26,11 +29,27 @@ const Header = ({location}) => {
                     <div className="col-span-1 sm:col-span-2 md:col-span-1 flex gap-[6px] sm:gap-4 justify-self-end items-center">
                         <button type='button' onClick={() => setShowModal(true)}><CiSearch className='text-white text-xl sm:text-2xl cursor-pointer'/></button> 
                         <RiShoppingCartLine className='text-white text-base sm:text-xl cursor-pointer'/>
-                        <Link to="/auth/login" className='btn   btn-sm md:btn md:bg-red-800 md:text-white bg-red-800 text-sm md:text-base sm:text-base outline-none border-none md:border-none text-white'>Login</Link>
+                        {user ? <div className='text-white relative'>
+                            <button type='button' onClick={()=>setDropDown(!dropDown)} className=' bg-red-700 p-1 px-2 border rounded'>{user?.displayName || "user"}</button>
+                            {dropDown && <div className='absolute -bottom-18  left-0 w-full z-50'>
+                                <div className="flex flex-col gap-1 bg-gray-200 text-red-700 z-20">
+                                     <Link to="/profile" className={`text-center cursor-pointer border-b border-stone-300 w-full items-center p-1 transition-all ease-in hover:text-black duration-100`} >
+                                        Profile
+                                    </Link>
+
+                                    <button type='button' className="cursor-pointer p-1 w-full items-center transition-all ease-in hover:text-black duration-100" onClick={logOut}>
+                                        Logout
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            }
+                        </div>: 
+                        <Link to="/auth/login" className='btn   btn-sm md:btn md:bg-red-800 md:text-white bg-red-800 text-sm md:text-base sm:text-base outline-none border-none md:border-none text-white'>Login</Link>}
+                        
                         <div className='justify-self-end'>
                             <Humburger />
                         </div>
-                       
                     </div>
                 </div>
             </div>

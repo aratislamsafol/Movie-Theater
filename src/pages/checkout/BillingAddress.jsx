@@ -1,11 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { debounce } from "lodash";
+import { AuthContext } from "../../provider/AuthProvider";
 const BillingAddress = ({heading}) => {
     const [countries, setCountries] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredCountries, setFilteredCountries] = useState(countries);
     const [ dropDownOpen, setDropDownOpen ] = useState(false);
     const [selectItem, setSelectItem] = useState("Afganstan");
+    const {user}= useContext(AuthContext);
     
     useEffect(() => {
         fetch('/dataset/country.json')
@@ -40,16 +42,22 @@ const BillingAddress = ({heading}) => {
     return (
          <div className="text-start p-10 px-6 bg-stone-900 rounded-xl">
             <h2 className="text-gray-50 font-semibold text-2xl pb-4">{heading}</h2>
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className={`flex flex-col`}>
                     <label htmlFor="firstName">
                         First Name <span className="text-red-700">*</span>
                     </label>
-                    <input className="mt-1 p-3 bg-black outline-none text-gray-100" type="text"
+                    {user ? <input className="mt-1 p-3 bg-black outline-none text-gray-100" type="text"
+                        name="firstName" 
+                        id="firstName"
+                        value={user.displayName}
+                        required
+                    />:  <input className="mt-1 p-3 bg-black outline-none text-gray-100" type="text"
                         name="firstName" 
                         id="firstName"
                         required
-                    />
+                    />}
+                   
                 </div>
 
                 <div className={`flex flex-col`}>
@@ -155,7 +163,7 @@ const BillingAddress = ({heading}) => {
                         required
                     />
                 </div>
-            </form>
+            </div>
         </div>
 
     );

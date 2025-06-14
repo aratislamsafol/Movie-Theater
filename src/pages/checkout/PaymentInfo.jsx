@@ -2,6 +2,7 @@
 import DatePickers from '../../components/DatePicker/DatePicker';
 
 const PaymentInfo = ({heading}) => {
+    
     return (
         <div className='p-10 px-6 bg-stone-900 rounded-xl'>
             <h2 className='text-gray-50 font-semibold text-2xl pb-4'>{heading}</h2>

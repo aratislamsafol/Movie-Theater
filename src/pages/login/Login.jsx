@@ -9,7 +9,7 @@ const Login = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-
+    
     const handleForm = (e) => {
         e.preventDefault();
         const formData =new FormData(e.target);
