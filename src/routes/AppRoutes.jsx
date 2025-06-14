@@ -8,10 +8,11 @@ import AuthProvider from "../provider/AuthProvider";
 import Registration from "../pages/Registration/Registration";
 import AuthLayout from "../layouts/AuthLayout";
 import SubScription from "../pages/subScription/SubScription";
-import SubScriptionLayout from "../layouts/SubScriptionLayout";
 import CheckOut from "../pages/checkout/CheckOut";
 import UserProfile from "../pages/ProfilePage";
 import ProtectedRoute from "./ProtectedRoute";
+import BreadcrumbLayout from "../layouts/BreadcrumbLayout";
+import ViewAll from "../pages/ViewAll/ViewAll";
 const router= createBrowserRouter([
   {
     path: "/",
@@ -26,7 +27,7 @@ const router= createBrowserRouter([
         path: "item/:id",
         element: <SinglePage></SinglePage>,
         loader: Loader('/dataset/movies.json','/dataset/tvseris.json')
-      }
+      },
     ]
   },
   {
@@ -45,7 +46,7 @@ const router= createBrowserRouter([
   }, 
   {
     path: 'pricing',
-    element: <SubScriptionLayout />,
+    element: <BreadcrumbLayout />,
     children: [
       {
         path: 'pricing-plan',
@@ -62,10 +63,17 @@ const router= createBrowserRouter([
     path: '/profile',
     element: <ProtectedRoute><UserProfile /></ProtectedRoute>
   }, 
-  // {
-  //   path: '/profile',
-  //   element: <UserProfile></UserProfile>
-  // }, 
+  {
+    path:'movies',
+    element: <BreadcrumbLayout></BreadcrumbLayout>,
+    children: [
+      {
+        index: true,
+        element: <ViewAll></ViewAll>, 
+        loader: Loader('/dataset/movies.json')
+      }
+    ]
+  }
 
 ])
 export default router;

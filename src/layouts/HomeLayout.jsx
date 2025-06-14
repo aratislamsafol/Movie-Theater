@@ -65,7 +65,7 @@ const HomeLayout = () => {
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Only on Streamit</h2>
-                            <Link to="" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
+                            <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
                         <CarouselContainer className="px-2" allData={allData.tvSeries} indexItem={false} detailsHover={true} aspectCss={true} showDots={true} autoPlaySpeed={2400} contentName={false}/>
                     </div>

@@ -2,7 +2,7 @@ import { Link, Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
-const SubScriptionLayout = () => {
+const BreadcrumbLayout = () => {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x).slice(-1);
 
@@ -42,4 +42,4 @@ const SubScriptionLayout = () => {
   );
 };
 
-export default SubScriptionLayout;
+export default BreadcrumbLayout;
