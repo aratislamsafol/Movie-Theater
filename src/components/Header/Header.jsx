@@ -57,11 +57,7 @@ const Header = ({location}) => {
             {isOpen && <OffCanvas />}
             {/* using Modal For Search */}
             <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-                <input
-                type="text"
-                placeholder="Type to search..."
-                className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded md:rounded-xl text-lg focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-sm"
-                />
+                <input type="text" placeholder="Type to search..." className=" w-full px-3 md:px-4 py-2 border border-gray-300 rounded md:rounded-xl text-lg focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-sm text-white placeholder-white" />
             </Modal>
         </div>
 

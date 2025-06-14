@@ -71,7 +71,7 @@ const OffCanvas = () => {
     <>
       <div ref={sliderOverlayRef} className="fixed top-0 left-0 h-full w-8/12 bg-black/30 z-40" style={{ transform: "translateX(-100%)" }}>
       </div>
-      <div ref={offcanvasRef} className='bg-gray-900 w-8/12 h-full absolute top-0 left-0 p-3 offcanvas z-51' style={{ overflowY: 'auto' }}>
+      <div ref={offcanvasRef} className='bg-stone-900 w-8/12 h-full absolute top-0 left-0 p-3 offcanvas z-51' style={{ overflowY: 'auto' }}>
         {/* logo Image */}
         <div>
           <img src={logo} alt="logo" className='w-45 sm:w-50'/>

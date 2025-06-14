@@ -11,6 +11,7 @@ import SubScription from "../pages/subScription/SubScription";
 import SubScriptionLayout from "../layouts/SubScriptionLayout";
 import CheckOut from "../pages/checkout/CheckOut";
 import UserProfile from "../pages/ProfilePage";
+import ProtectedRoute from "./ProtectedRoute";
 const router= createBrowserRouter([
   {
     path: "/",
@@ -58,8 +59,13 @@ const router= createBrowserRouter([
     ]
   },
   {
-        path: '/profile',
-        element: <UserProfile></UserProfile>
-      }
+    path: '/profile',
+    element: <ProtectedRoute><UserProfile /></ProtectedRoute>
+  }, 
+  // {
+  //   path: '/profile',
+  //   element: <UserProfile></UserProfile>
+  // }, 
+
 ])
 export default router;

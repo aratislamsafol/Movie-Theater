@@ -72,11 +72,11 @@ const Login = () => {
 
                 <form className="w-full" onSubmit={handleForm}>
                     <label htmlFor="email" className="sr-only">Email address</label>
-                    <input name="email" id="email" type="email"  autocomplete="email" required=""
+                    <input name="email" id="email" type="email"  autoComplete="email" required=""
                         className="block w-full rounded-lg border border-gray-600 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-red-700 "
                         placeholder="Email Address"/>
                     <label htmlFor="password" className="sr-only">Password</label>
-                    <input name="password" id="password" type="password" autocomplete="current-password" required=""
+                    <input name="password" id="password" type="password" autoComplete="current-password" required=""
                         className="mt-2 block w-full rounded-lg border border-gray-600 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
                         placeholder="Password" />
                     {

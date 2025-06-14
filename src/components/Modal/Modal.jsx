@@ -58,7 +58,7 @@ const Modal = ({ isOpen, onClose, children, bgColor, positionDesign, width = "w-
     >
       <div
         ref={modalRef}
-        className={`${bgColor? bgColor: "bg-gray-200"} ${width} rounded-md md:rounded-lg p-4 max-w-[1200px] shadow-2xl relative`}
+        className={`${bgColor? bgColor: "bg-stone-800"} w-3/4 md:w-xl rounded-md md:rounded-lg p-4 max-w-[1200px] shadow-2xl relative`}
       >
         <button
           onClick={onClose}
