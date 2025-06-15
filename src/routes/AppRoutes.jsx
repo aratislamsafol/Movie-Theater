@@ -14,6 +14,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import BreadcrumbLayout from "../layouts/BreadcrumbLayout";
 import ViewAll from "../pages/ViewAll/ViewAll";
 import WishList from "../pages/WishList";
+import Contact from "../pages/Contact";
 const router= createBrowserRouter([
   {
     path: "/",
@@ -86,6 +87,17 @@ const router= createBrowserRouter([
         loader: Loader('/dataset/movies.json')
       }
     ]
+  },
+  {
+    path:'contact',
+     element: <BreadcrumbLayout></BreadcrumbLayout>,
+     children: [
+      {
+        index:true,
+        element: <Contact></Contact>,
+      }
+     ]
+    
   }
 
 ])

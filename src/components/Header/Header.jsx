@@ -9,7 +9,7 @@ import { RiShoppingCartLine } from "react-icons/ri";
 import Modal from '../Modal/Modal';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
-import { FaUserCircle } from 'react-icons/fa'; // Import a default user icon
+import { FaUserCircle, FaRegUser, FaRegBookmark, FaListAlt, FaRegBell, FaSignOutAlt } from 'react-icons/fa'; // Import additional icons
 
 const Header = ({ location }) => {
     const { user, logOut } = useContext(AuthContext);
@@ -17,10 +17,10 @@ const Header = ({ location }) => {
     const [showModal, setShowModal] = useState(false);
     const [dropDown, setDropDown] = useState(false);
 
-    // console.log(user?.photoURL); // Log photoURL for debugging
+    const defaultUserImage = 'https://via.placeholder.com/40x40?text=User';
 
-    // Default image if user.photoURL is not available
-    const defaultUserImage = 'https://via.placeholder.com/40x40?text=User'; // Placeholder image URL
+    // Function to close dropdown after clicking a menu item
+    const closeDropDown = () => setDropDown(false);
 
     return (
         <div className="bg-black">
@@ -39,11 +39,11 @@ const Header = ({ location }) => {
                         <RiShoppingCartLine className='text-white text-base sm:text-xl cursor-pointer' />
 
                         {user ? (
-                            <div className='relative'>
+                            <div className='relative flex items-center'> 
                                 <button
                                     type='button'
                                     onClick={() => setDropDown(!dropDown)}
-                                    className='relative w-10 h-10 rounded-full overflow-hidden focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-200' // Added styling for the button itself
+                                    className='relative w-8 h-8 rounded-full overflow-hidden focus:outline-none focus:ring-2 focus:ring-red-500 transition-all duration-200'
                                 >
                                     {user.photoURL ? (
                                         <img
@@ -51,34 +51,63 @@ const Header = ({ location }) => {
                                             alt="User Profile"
                                             className="w-full h-full object-cover"
                                             onError={(e) => {
-                                                e.target.onerror = null; // Prevent infinite loop if default image also fails
-                                                e.target.src = defaultUserImage; // Fallback to a placeholder if user image fails to load
+                                                e.target.onerror = null;
+                                                e.target.src = defaultUserImage;
                                             }}
                                         />
                                     ) : (
-                                        // Default icon if no photoURL
                                         <FaUserCircle className='w-full h-full text-gray-400 bg-gray-700 p-1' />
                                     )}
                                 </button>
+
                                 {dropDown && (
-                                    <div className='absolute top-full right-0 mt-2 w-max min-w-[120px] bg-gray-200 text-red-700 rounded-md shadow-lg overflow-hidden z-50'>
-                                        <div className="flex flex-col">
+                                    <div className='absolute top-full right-0 mt-2 w-60 bg-[#252525] text-white rounded-md shadow-lg overflow-hidden z-50'> {/* Adjusted background and width */}
+                                        <div className='flex items-center p-3 border-b border-gray-700'>
+                                            {user.photoURL ? (
+                                                <img
+                                                    src={user.photoURL}
+                                                    alt="User Profile"
+                                                    className="w-10 h-10 rounded-full object-cover mr-3"
+                                                />
+                                            ) : (
+                                                <FaUserCircle className='w-10 h-10 text-gray-400 bg-gray-700 p-1 rounded-full mr-3' />
+                                            )}
+                                            <span className='text-base font-semibold'>{user.displayName || "Marvin McKinney"}</span>
+                                        </div>
+                                        <div className="flex flex-col py-1">
                                             <Link
                                                 to="/profile"
-                                                className="block px-4 py-2 text-center text-sm transition-all ease-in hover:bg-red-700 hover:text-white duration-100"
-                                                onClick={() => setDropDown(false)} // Close dropdown on click
+                                                className="flex items-center px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-100"
+                                                onClick={closeDropDown}
                                             >
-                                                Profile
+                                                <FaRegUser className='mr-3 text-lg' /> Profile
                                             </Link>
+                                            <Link
+                                                to="/watchlist" 
+                                                className="flex items-center px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-100"
+                                                onClick={closeDropDown}
+                                            >
+                                                <FaRegBookmark className='mr-3 text-lg' /> Watch List
+                                            </Link>
+                                            <Link
+                                                to="/playlist" 
+                                                className="flex items-center px-4 py-2 text-sm hover:bg-gray-700 transition-colors duration-100"
+                                                onClick={closeDropDown}
+                                            >
+                                                <FaListAlt className='mr-3 text-lg' /> Playlist
+                                            </Link>
+                                            
+                                        </div>
+                                        <div className="border-t border-gray-700 py-1">
                                             <button
                                                 type='button'
-                                                className="block px-4 py-2 text-center text-sm transition-all ease-in hover:bg-red-700 hover:text-white duration-100"
+                                                className="flex items-center w-full px-4 py-2 text-sm text-red-500 hover:bg-red-700 hover:text-white transition-colors duration-100"
                                                 onClick={() => {
                                                     logOut();
-                                                    setDropDown(false); // Close dropdown on logout
+                                                    closeDropDown();
                                                 }}
                                             >
-                                                Logout
+                                                <FaSignOutAlt className='mr-3 text-lg' /> Logout
                                             </button>
                                         </div>
                                     </div>
@@ -101,7 +130,7 @@ const Header = ({ location }) => {
                 <input
                     type="text"
                     placeholder="Type to search..."
-                    className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded md:rounded-xl text-lg focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-sm text-white placeholder-white bg-stone-800" // Added dark background to search input
+                    className="w-full px-3 md:px-4 py-2 border border-gray-300 rounded md:rounded-xl text-lg focus:outline-none focus:ring-1 focus:ring-gray-300 shadow-sm text-white placeholder-white bg-stone-800"
                 />
             </Modal>
         </div>
