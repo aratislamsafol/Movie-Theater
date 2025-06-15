@@ -13,6 +13,7 @@ import UserProfile from "../pages/ProfilePage";
 import ProtectedRoute from "./ProtectedRoute";
 import BreadcrumbLayout from "../layouts/BreadcrumbLayout";
 import ViewAll from "../pages/ViewAll/ViewAll";
+import WishList from "../pages/WishList";
 const router= createBrowserRouter([
   {
     path: "/",
@@ -61,7 +62,8 @@ const router= createBrowserRouter([
   },
   {
     path: '/profile',
-    element: <ProtectedRoute><UserProfile /></ProtectedRoute>
+    element: <ProtectedRoute><UserProfile /></ProtectedRoute>,
+    loader: Loader('/dataset/movies.json','/dataset/tvseris.json')
   }, 
   {
     path:'movies',
@@ -70,6 +72,17 @@ const router= createBrowserRouter([
       {
         index: true,
         element: <ViewAll></ViewAll>, 
+        loader: Loader('/dataset/movies.json')
+      }
+    ]
+  },
+  {
+    path:'wishlist',
+    element: <BreadcrumbLayout></BreadcrumbLayout>,
+    children: [
+      {
+        index: true,
+        element: <ProtectedRoute><WishList /></ProtectedRoute>, 
         loader: Loader('/dataset/movies.json')
       }
     ]

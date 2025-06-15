@@ -47,15 +47,15 @@ const OffCanvas = () => {
   const menuItems = [
     {
       title: "Home",
-      submenu: ["Main Home", "Movies", "OTT Home", "TV Shows"]
+       submenu: [{name: "Main Home", link: "/"}, {name: "Movies", link: "/movies"}, {name: "OTT Home", link: "/"}, {name: "TV Shows", link: "/tv-shows"}]
     },
     {
       title: "Features",
-      submenu: ["Download Movies", "Restricted Content", "Related Merchandise", "Genres", "Tags", "Casts"]
+      submenu: [{name: "Download Movies", link: "/download"}, {name: "Restricted Content", link: "/restircted-content"}, {name: "Related Merchandise", link: "/merchandise"}, {name: "Genres", link: "/genres"}, {name: "Casts", link: "/casts"}]
     },
     {
       title: "Pages",
-      submenu: ["About Us", "Contact Us", "FAQ", "Pricing Plan", "Privacy Policy", "Terms & Use"]
+      submenu: [{name: "About Us", link: "/about"}, {name: "Contact Us", link: "/contact"}, {name: "FAQ", link: "/faq"}, {name: "Privacy Policy", link: "/privacy-policy"}, {name: "Terms & Use", link: "/terms"}]
     },
     {
       title: "Blog",
@@ -63,7 +63,7 @@ const OffCanvas = () => {
     },
     {
       title: "Shop",
-      submenu: ["Cart", "Checkout", "Wishlist", "My Account"]
+      submenu: [{name: "Cart", link: "/cart"}, {name: "Checkout", link: "/cart"}, {name: "Wishlist", link: "/wishlist"}, {name: "My Account", link: "/account"}]
     },
   ];
 
@@ -94,8 +94,9 @@ const OffCanvas = () => {
                   className='border border-gray-800/90 px-3 p-2 rounded-lg w-10/12'
                 >
                   {item.submenu.map((subitem, i) => (
+                    
                     <li key={i}>
-                      <Link className='py-1 block w-full hover:text-red-500'>{subitem}</Link>
+                      <Link to={`${subitem.link}`} className='py-1 block w-full hover:text-red-500'>{subitem.name}</Link>
                     </li>
                   ))}
                 </ul>

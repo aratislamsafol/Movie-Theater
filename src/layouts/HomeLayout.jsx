@@ -73,7 +73,7 @@ const HomeLayout = () => {
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Fresh Picks Just For You</h2>
-                            <Link to="" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
+                            <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
                         <CarouselContainer className="px-2" allData={movies.movies} indexItem={false} detailsHover={true} aspectCss={false}  showDots={false} autoPlaySpeed={3000}/>
                     </div>
@@ -81,7 +81,7 @@ const HomeLayout = () => {
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4  px-3">Upcoming Movies</h2>
-                            <Link to="" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
+                            <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
                         <CarouselContainer className="px-2" allData={allData.upcomingMovies} indexItem={false} detailsHover={true} aspectCss={true}  showDots={true} autoPlaySpeed={2400}/>
                     </div>
@@ -92,7 +92,7 @@ const HomeLayout = () => {
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Your Favorite Personality</h2>
-                            <Link to="" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
+                            <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
                         <CarouselContainer className="px-2" allData={allData.upcomingMovies} indexItem={false} detailsHover={true} aspectCss={true}  showDots={true} autoPlaySpeed={2400}/>
                     </div>
@@ -100,7 +100,7 @@ const HomeLayout = () => {
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Popular Movies</h2>
-                            <Link to="" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
+                            <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
                         <CarouselContainer className="px-2" allData={allData.movies.sort((a, b) => b.rating - a.rating)} indexItem={false} detailsHover={true} aspectCss={true}  showDots={true} autoPlaySpeed={2400}/>
                     </div>
@@ -112,7 +112,7 @@ const HomeLayout = () => {
                      <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Movie Genre</h2>
-                            <Link to="" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
+                            <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
                         <CarouselContainer className="px-2" allData={allData.combineOfMoviesTV} indexItem={false} detailsHover={true} aspectCss={false}  showDots={false} autoPlaySpeed={3000} contentName={true}/>
                     </div>
@@ -120,7 +120,7 @@ const HomeLayout = () => {
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Recommended for You</h2>
-                            <Link to="" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
+                            <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
                         <CarouselContainer className="px-2" allData={allData.movies.sort((a, b) => b.rating - a.rating)} indexItem={false} detailsHover={true} aspectCss={true}  showDots={false} autoPlaySpeed={2400}/>
                     </div>

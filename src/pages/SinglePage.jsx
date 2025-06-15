@@ -24,7 +24,6 @@ const SinglePage = () => {
     const [upComingMovie, setUpComingMovie] = useState([]);
     const combinedData = useMemo(() => [...movieData, ...tvData], [movieData, tvData]);
 
-    console.log(matchDirector)
     const targetData = useMemo(() => {
         return combinedData.find(data => data.id === Number(id));
     }, [combinedData, id]);

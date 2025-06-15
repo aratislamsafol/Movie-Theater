@@ -1,18 +1,28 @@
-import React, { useContext, useRef, useState } from "react";
+import  { useContext, useEffect, useRef, useState } from "react";
 import { showSuccess, showConfirm } from "../utils/SweetAlert";
 import Header from "../components/Header/Header";
 import { AuthContext } from "../provider/AuthProvider";
+import ProfileTab from "../components/ProfileTab/ProfileTab";
+import { useLoaderData } from "react-router-dom";
 
 const ProfilePage = () => {
     const {user} = useContext(AuthContext);
+    const {movies, tvSeries} = useLoaderData();
+    const [ combineData, setCombineData ] = useState([]);
+    
+    useEffect(()=>{
+        const combine = [...movies.movies, ...tvSeries.tv_series];
+        setCombineData(combine);
+    },[movies, tvSeries])
+    
     const [isEditing, setIsEditing] = useState(false);
-    const [profileImg, setProfileImg] = useState("https://i.pravatar.cc/100");
+    const [profileImg, setProfileImg] = useState(user.photoURL);
     const [showEmailModal, setShowEmailModal] = useState(false);
     const [newEmail, setNewEmail] = useState("");
     const [emails, setEmails] = useState([
         { address: "alexarawles@gmail.com", addedAt: "1 month ago" },
     ]);
-    console.log(user);
+
     const fileInputRef = useRef(null);
 
     const handleEditToggle = async () => {
@@ -26,7 +36,7 @@ const ProfilePage = () => {
             setIsEditing(true);
         }
     };
-
+    console.log(user)
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -69,8 +79,8 @@ const ProfilePage = () => {
                                     type="file" accept="image/*" ref={fileInputRef} className="hidden" onChange={handleImageChange} />
                             </div>
                             <div>
-                                <h2 className="text-xl font-semibold">Alexa Rawles</h2>
-                                <p className="text-gray-200 text-sm">alexarawles@gmail.com</p>
+                                <h2 className="text-xl font-semibold">{user.displayName}</h2>
+                                <p className="text-gray-200 text-sm">{user.email}</p>
                             </div>
                         </div>
                         <button
@@ -84,7 +94,7 @@ const ProfilePage = () => {
 
                     {/* Form */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                        {[{ label: "Full Name", value: "Alexa" }, { label: "Nick Name", value: "Lexi" }].map(
+                        {[{ label: "Full Name", value: "Alex" }, { label: "Nick Name", value: "Lexi" }].map(
                             (field, idx) => (
                                 <div key={idx}>
                                     <label className="block text-sm font-medium">{field.label}</label>
@@ -124,7 +134,9 @@ const ProfilePage = () => {
                             </div>
                         ))}
                     </div>
-
+                    
+                    {/* create Tab */}
+                    <ProfileTab allData = {combineData} />
                     {/* Email Section */}
                     <div className="mt-8">
                         <h3 className="font-medium mb-2 text-white">My email Address</h3>
