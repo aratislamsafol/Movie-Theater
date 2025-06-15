@@ -30,24 +30,24 @@ const ProfileTab = ({ allData }) => {
     },
   ]);
 
-
   const [activeTab, setActiveTab] = useState(() => tabs[0]?.name || "Playlist");
-  const [activeMediaTab, setActiveMediaTab] = useState("movies"); 
+  // Initialize activeMediaTab based on the default parent tab's first media category
+  const [activeMediaTab, setActiveMediaTab] = useState("movies");
+
   const [filterMovies, setFilterMovies] = useState([]);
   const [filterVideos, setFilterVideos] = useState([]);
   const [filterEpisodes, setFilterEpisodes] = useState([]);
-
 
   const activeTabData = useMemo(() => {
     return tabs.find((tab) => tab.name === activeTab);
   }, [activeTab, tabs]);
 
-
+  // Effect hook to filter media data whenever allData or the activeTabData changes
   useEffect(() => {
-    if (allData?.length && activeTabData?.category) {
+    if (activeTabData?.category) { // Only proceed if the active main tab has categories
       // Filter Movies
       const movieIds =
-        activeTabData?.category?.find((cat) => cat.movies)?.movies || [];
+        activeTabData.category.find((cat) => cat.movies)?.movies || [];
       const filteredMovies = allData.filter((data) =>
         movieIds.includes(data.id)
       );
@@ -55,7 +55,7 @@ const ProfileTab = ({ allData }) => {
 
       // Filter Videos
       const videoIds =
-        activeTabData?.category?.find((cat) => cat.videos)?.videos || [];
+        activeTabData.category.find((cat) => cat.videos)?.videos || [];
       const filteredVideos = allData.filter((data) =>
         videoIds.includes(data.id)
       );
@@ -63,20 +63,30 @@ const ProfileTab = ({ allData }) => {
 
       // Filter Episodes
       const episodeIds =
-        activeTabData?.category?.find((cat) => cat.episodes)?.episodes || [];
+        activeTabData.category.find((cat) => cat.episodes)?.episodes || [];
       const filteredEpisodes = allData.filter((data) =>
         episodeIds.includes(data.id)
       );
       setFilterEpisodes(filteredEpisodes);
     } else {
-      // Clear all filtered data if no category or allData is available
+      // Clear all filtered data if no category is available for the active tab
       setFilterMovies([]);
       setFilterVideos([]);
       setFilterEpisodes([]);
     }
-    // Reset the active nested media tab to 'movies' whenever the parent tab changes
-    setActiveMediaTab("movies");
-  }, [allData, activeTabData, activeTab]); // Dependencies ensure re-run on relevant changes
+  }, [allData, activeTabData]); // Removed 'activeTab' from dependencies. This useEffect will now only re-run
+                               // when allData or the specific activeTabData object changes, not when the
+                               // activeTab *name* itself is clicked. This prevents unnecessary resets.
+
+
+  // A separate useEffect to handle resetting activeMediaTab ONLY when the activeTab (main tab) changes
+  useEffect(() => {
+    // Only reset if the activeTab is not "Membership"
+    if (activeTab !== "Membership") {
+      setActiveMediaTab("movies");
+    }
+  }, [activeTab]); // This runs only when the main tab changes
+
 
   // Memoized array for nested media tab buttons
   const mediaTabs = useMemo(() => [
@@ -135,10 +145,10 @@ const ProfileTab = ({ allData }) => {
       </div>
 
       {/* Tab Content Area */}
-      <div className="bg-stone-700 p-5 rounded-md flex-1 text-white shadow-md border border-stone-600">
-
+      <div className="bg-stone-700 p-2 sm:p-3 md:p-5 rounded-md flex-1 text-white shadow-md border border-stone-600">
+        {/* Render content for the "Membership" tab */}
         {activeTab === "Membership" && (
-          <div className="overflow-x-auto"> 
+          <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-stone-600">
               {/* Table Header */}
               <thead className="bg-stone-800">
@@ -161,7 +171,7 @@ const ProfileTab = ({ allData }) => {
               <tbody className="bg-stone-700 divide-y divide-stone-600">
                 {/* Map through transactions to create table rows */}
                 {activeTabData.transactions && activeTabData.transactions.map((transaction, index) => (
-                  <tr key={index}> 
+                  <tr key={index}>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-red-400">
                       {transaction.date}
                     </td>
@@ -194,7 +204,7 @@ const ProfileTab = ({ allData }) => {
           </div>
         )}
 
-
+        {/* Render content for "Playlist" and "WatchList" tabs (with nested media tabs) */}
         {activeTab !== "Membership" && activeTabData?.category && (
           <div className="space-y-4">
             {/* Nested Media Tab Buttons (Movies, Videos, Episodes) */}
@@ -207,10 +217,10 @@ const ProfileTab = ({ allData }) => {
                     ${
                       activeMediaTab === mTab.type
                         ? "bg-red-600 text-white" // Active nested tab style
-                        : "bg-stone-700 text-stone-300 hover:bg-stone-600 hover:text-white" 
+                        : "bg-stone-700 text-stone-300 hover:bg-stone-600 hover:text-white"
                     }`}
                 >
-                  {mTab.name} ({ 
+                  {mTab.name} ({
                     mTab.type === 'movies' ? filterMovies.length :
                     mTab.type === 'videos' ? filterVideos.length :
                     filterEpisodes.length
@@ -244,7 +254,7 @@ const ProfileTab = ({ allData }) => {
                               alt={item.title || `Movie ${item.id}`}
                             />
                             {item.title && (
-                              <p className="p-2 text-sm truncate">{item.title}</p> 
+                              <p className="p-2 text-sm truncate">{item.title}</p>
                             )}
                           </div>
                           {/* Delete Button */}
@@ -352,7 +362,6 @@ const ProfileTab = ({ allData }) => {
                   )}
                 </>
               )}
-
 
               {filterMovies?.length === 0 &&
                 filterVideos?.length === 0 &&

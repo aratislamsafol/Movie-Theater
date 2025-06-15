@@ -58,8 +58,8 @@ const ProfilePage = () => {
         <div className="bg-gradient-to-br from-black via-zinc-900 to-stone-900 min-h-screen text-white">
             <Header />
 
-            <div className="flex items-center justify-center min-h-[calc(100vh-80px)] px-4">
-                <div className="w-full max-w-5xl p-8 bg-stone-800 text-white rounded-xl shadow-lg">
+            <div className="flex items-center justify-center min-h-[calc(100vh-80px)] sm:px-2 md:px-4">
+                <div className="w-full max-w-5xl p-5 md:p-8 bg-stone-800 text-white rounded-xl shadow-lg">
                     {/* Header */}
                     <div className="flex items-center justify-between pb-6 border-b border-gray-300">
                         <div className="flex items-center gap-4">
