@@ -15,6 +15,7 @@ import BreadcrumbLayout from "../layouts/BreadcrumbLayout";
 import ViewAll from "../pages/ViewAll/ViewAll";
 import WishList from "../pages/WishList";
 import Contact from "../pages/Contact";
+import Accordion from "../components/Accordion/Accrodion";
 const router= createBrowserRouter([
   {
     path: "/",
@@ -95,6 +96,16 @@ const router= createBrowserRouter([
       {
         index:true,
         element: <Contact></Contact>,
+      }
+     ]
+  },
+  {
+    path:'faq',
+     element: <BreadcrumbLayout></BreadcrumbLayout>,
+     children: [
+      {
+        index:true,
+        element: <Accordion></Accordion>,
       }
      ]
     
