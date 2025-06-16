@@ -1,34 +1,41 @@
 import {createBrowserRouter} from "react-router-dom";
 import HomeLayout from "../layouts/HomeLayout";
 import Loader from "../utils/Loader";
-import Root from "../Root/Root";
-import SinglePage from "../pages/SinglePage";
 import Login from "../pages/login/Login";
-import AuthProvider from "../provider/AuthProvider";
 import Registration from "../pages/Registration/Registration";
 import AuthLayout from "../layouts/AuthLayout";
 import SubScription from "../pages/subScription/SubScription";
 import CheckOut from "../pages/checkout/CheckOut";
 import UserProfile from "../pages/ProfilePage";
 import ProtectedRoute from "./ProtectedRoute";
-import BreadcrumbLayout from "../layouts/BreadcrumbLayout";
 import ViewAll from "../pages/ViewAll/ViewAll";
 import WishList from "../pages/WishList";
 import Contact from "../pages/Contact";
 import Accordion from "../components/Accordion/Accrodion";
+import Loading from "../pages/Loading";
+import { lazy, Suspense } from "react";
+import About from "../pages/About";
+
+const Root = lazy(() => import("../Root/Root"));
+const SinglePage = lazy(() => import("../pages/SinglePage"));
+const BreadcrumbLayout = lazy(()=> import("../layouts/BreadcrumbLayout"))
 const router= createBrowserRouter([
   {
     path: "/",
-    element: <Root></Root>,
+    element: (
+      <Suspense fallback={<Loading />}>
+        <Root></Root>
+      </Suspense>
+    ),
     children: [
       {
         path: "/",
-        element:<HomeLayout></HomeLayout>,
+        element: <HomeLayout></HomeLayout>,
         loader: Loader('/dataset/movies.json','/dataset/tvseris.json')
       }, 
       {
         path: "item/:id",
-        element: <SinglePage></SinglePage>,
+        element: <Suspense fallback={<Loading />}><SinglePage></SinglePage></Suspense>,
         loader: Loader('/dataset/movies.json','/dataset/tvseris.json')
       },
     ]
@@ -49,7 +56,7 @@ const router= createBrowserRouter([
   }, 
   {
     path: 'pricing',
-    element: <BreadcrumbLayout />,
+    element: <Suspense fallback={<Loading />}><BreadcrumbLayout /></Suspense>,
     children: [
       {
         path: 'pricing-plan',
@@ -69,7 +76,7 @@ const router= createBrowserRouter([
   }, 
   {
     path:'movies',
-    element: <BreadcrumbLayout></BreadcrumbLayout>,
+    element: <Suspense fallback={<Loading />}><BreadcrumbLayout /></Suspense>,
     children: [
       {
         index: true,
@@ -80,7 +87,7 @@ const router= createBrowserRouter([
   },
   {
     path:'wishlist',
-    element: <BreadcrumbLayout></BreadcrumbLayout>,
+    element: <Suspense fallback={<Loading />}><BreadcrumbLayout /></Suspense>,
     children: [
       {
         index: true,
@@ -91,7 +98,7 @@ const router= createBrowserRouter([
   },
   {
     path:'contact',
-     element: <BreadcrumbLayout></BreadcrumbLayout>,
+     element: <Suspense fallback={<Loading />}><BreadcrumbLayout /></Suspense>,
      children: [
       {
         index:true,
@@ -101,7 +108,7 @@ const router= createBrowserRouter([
   },
   {
     path:'faq',
-     element: <BreadcrumbLayout></BreadcrumbLayout>,
+     element: <Suspense fallback={<Loading />}><BreadcrumbLayout /></Suspense>,
      children: [
       {
         index:true,
@@ -109,7 +116,18 @@ const router= createBrowserRouter([
       }
      ]
     
+  },
+  {
+    path:'about',
+     element: <Suspense fallback={<Loading />}><BreadcrumbLayout /></Suspense>,
+     children: [
+      {
+        index:true,
+        element: <About></About>,
+      }
+     ]
   }
+
 
 ])
 export default router;

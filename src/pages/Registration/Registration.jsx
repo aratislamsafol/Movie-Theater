@@ -2,34 +2,35 @@ import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import logo from '../../assets/logos/logo.png';
+import { showToast } from '../../utils/SweetAlert'; // Assuming showToast can take a callback
 
 const Registration = () => {
-    const { createAccount, updateUserProfile, setUser } = useContext(AuthContext);
+    const { createAccount, updateUserProfile, setUser, verificationEmail } = useContext(AuthContext);
     const [error, setError] = useState({});
     const navigate = useNavigate();
 
     const getCustomErrorMessage = (code) => {
-    switch (code) {
-        case "auth/email-already-in-use":
-            return "Email Account is Already Used";
-        case "auth/invalid-email":
-            return "Please Provied the Valid Email";
-        case "auth/weak-password":
-            return "Weak password. It must be at least 6 characters long and include uppercase and lowercase letters, a number, and a special character.";
-        case "auth/missing-password":
-            return "Password Must be Required";
-        case "auth/internal-error":
-            return "Internal Error, Try Again Later";
-        case "auth/network-request-failed":
-            return "Netword Request Failed, Check Internet Connection";
-        default:
-            return "Something Wrong! Try Again Please";
-    }
-};
+        switch (code) {
+            case "auth/email-already-in-use":
+                return "Email Account is Already Used";
+            case "auth/invalid-email":
+                return "Please Provide a Valid Email";
+            case "auth/weak-password":
+                return "Weak password. It must be at least 6 characters long and include uppercase and lowercase letters, a number, and a special character.";
+            case "auth/missing-password":
+                return "Password Must be Required";
+            case "auth/internal-error":
+                return "Internal Error, Try Again Later";
+            case "auth/network-request-failed":
+                return "Network Request Failed, Check Internet Connection";
+            default:
+                return "Something Went Wrong! Please Try Again";
+        }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const form  = new FormData(e.target);
+        const form = new FormData(e.target);
         const password = form.get("password");
         const email = form.get("email");
         const name = form.get("name");
@@ -37,41 +38,47 @@ const Registration = () => {
         const terms = form.get("terms");
         const confirmPassword = form.get("cPassword");
 
-        // validation Password
+        // Validation for Password
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{6,}$/;
-        
+
         if (!passwordRegex.test(password)) {
             const message = getCustomErrorMessage("auth/weak-password");
             setError({ CreateAccount: message });
             return;
         }
-        // confirm Password Check
+        // Confirm Password Check
         if (password !== confirmPassword) {
-        setError({ CreateAccount: "Password and Confirm Password do not match." });
-        return;
+            setError({ CreateAccount: "Password and Confirm Password do not match." });
+            return;
         }
-        // validation Terms
+        // Validation for Terms
         if (!terms) {
             setError({ CreateAccount: "You must accept the Terms & Conditions." });
             return;
         }
+
         createAccount(email, password)
-        .then(res => {
-            setUser(res.user);
-            updateUserProfile({displayName: name, photoURL: url})
-            .then(() =>{
-                navigate("/");
+            .then(() => {
+                updateUserProfile({ displayName: name, photoURL: url })
+                    .then(() => {
+                        verificationEmail().then(() => {
+                            showToast("Please verify your email before logging in.").then(() => {
+                                setUser(null);
+                                navigate("/auth/login"); 
+                            });
+                        });
+                    })
+                    .catch(err => {
+                        const message = getCustomErrorMessage(err.code);
+                        setError({ ...error, UpdateProfile: message });
+                    });
             })
-            .catch(err=> {
-                 const message = getCustomErrorMessage(err.code);
-                 setError({...error, UpdateProfile:message})
-            })
-        })
-         .catch(err => {
-            const message = getCustomErrorMessage(err.code);
-            setError({ ...error, CreateAccount: message });
-        });
+            .catch(err => {
+                const message = getCustomErrorMessage(err.code);
+                setError({ ...error, CreateAccount: message });
+            });
     }
+
     return (
         <div className="relative p-4 w-full max-w-md h-full md:h-auto bg-black/80 rounded-lg shadow">
             <div className="p-5">
@@ -80,7 +87,7 @@ const Registration = () => {
                 </div>
                 <div className="text-center">
                     <p className="mb-3 text-xl font-semibold leading-5 text-gray-100">
-                        Sign Up to your account 
+                        Sign Up to your account
                     </p>
                 </div>
 
@@ -117,16 +124,16 @@ const Registration = () => {
 
                 <form className="w-full" onSubmit={handleSubmit}>
                     <label htmlFor="name" className="sr-only">Name</label>
-                    <input name="name" id="name" type="text"  required className="block w-full rounded-lg border border-gray-600 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-red-700 "
+                    <input name="name" id="name" type="text" required className="block w-full rounded-lg border border-gray-600 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-red-700 "
                         placeholder="Name"/>
 
                     <label htmlFor="url" className="sr-only">Image Url</label>
-                    <input name="url" id="url" type="text"  
+                    <input name="url" id="url" type="text"
                         className="mt-2 block w-full rounded-lg border border-gray-600 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-red-700 "
                         placeholder="Image Url"/>
 
                     <label htmlFor="email" className="sr-only">Email address</label>
-                    <input name="email" id="email" type="email"  autoComplete="email" required
+                    <input name="email" id="email" type="email" autoComplete="email" required
                         className="mt-2 block w-full rounded-lg border border-gray-600 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-1 focus:ring-red-700 "
                         placeholder="Email Address"/>
                     <label htmlFor="password" className="sr-only">Password</label>
@@ -137,14 +144,14 @@ const Registration = () => {
                     <input name="cPassword" id="cPassword" type="password" autoComplete="current-password" required
                         className="mt-2 block w-full rounded-lg border border-gray-600 px-3 py-2 shadow-sm outline-none placeholder:text-gray-400 focus:ring-2 focus:ring-black focus:ring-offset-1"
                         placeholder="Confirm Password" />
-                  
-                    
+
+
                     <div className="flex items-center mt-2 gap-2">
-                        <input type="checkbox" name="terms" className=" w-[14px] h-[14px] accent-red-700 rounded-md"  /><span className='text-sm'>Accept Term & Conditions</span>
-                    </div> 
-                    
+                        <input type="checkbox" name="terms" className=" w-[14px] h-[14px] accent-red-700 rounded-md" /><span className='text-sm'>Accept Term & Conditions</span>
+                    </div>
+
                     {
-                        (error.CreateAccount || error.UpdateProfile)  && <label className="text-sm text-red-600"> {error.CreateAccount || error.UpdateProfile}</label>
+                        (error.CreateAccount || error.UpdateProfile) && <label className="text-sm text-red-600"> {error.CreateAccount || error.UpdateProfile}</label>
                     }
 
                     <button type="submit" className="mt-2 inline-flex w-full items-center justify-center rounded-lg bg-red-700 p-2 py-3 text-sm font-medium text-white outline-none focus:ring-2 focus:ring-black focus:ring-offset-1 disabled:bg-gray-400 cursor-pointer">
@@ -153,7 +160,7 @@ const Registration = () => {
                 </form>
 
                 <div className="mt-6 text-center text-sm text-slate-600">
-                    Don't have an account?
+                    Already have an account?
                     <Link to="/auth/login" className="font-medium text-red-700"> Sign in</Link>
                 </div>
             </div>

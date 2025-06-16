@@ -2,6 +2,7 @@ import { useContext, useState } from 'react';
 import logo from '../../assets/logos/logo.png';
 import {AuthContext} from '../../provider/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { showToast } from '../../utils/SweetAlert';
 
 const Login = () => {
     const { loginAccount, setUser } = useContext(AuthContext);
@@ -19,6 +20,7 @@ const Login = () => {
         loginAccount(email, password)
         .then(res => {
             setUser(res.user);
+            showToast("You have successfully logged in!");
             const redirectPath = location?.state?.from?.pathname || "/";
             navigate(redirectPath, { replace: true });
         })

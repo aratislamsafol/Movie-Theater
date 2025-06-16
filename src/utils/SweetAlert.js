@@ -9,7 +9,7 @@ export const showSuccess = async (
     icon: 'success',
     title: title,
     text: message,
-    timer: 20000,
+    timer: 2000,
     showConfirmButton: true,
   });
 };
@@ -42,6 +42,8 @@ export const showToast = (message = 'Done!') => {
     showConfirmButton: false,
     timer: 1500,
     timerProgressBar: true,
+    background: '#1f1f1f',   
+    color: '#fff',       
   });
 
   Toast.fire({
