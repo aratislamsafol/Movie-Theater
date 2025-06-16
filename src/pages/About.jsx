@@ -36,13 +36,13 @@ const About = () => {
         <div className="px-3 md:px-4 lg:px-5">
             {/* About Text Section */}
             <div className="py-3 mt-6 text-center border-b border-gray-900 px-4">
-                <h1 className="font-medium text-xl md:text-2xl lg:text-3xl py-4 mt-10">
+                <h1 className="font-medium text-xl md:text-2xl lg:text-3xl py-4 md:mt-10">
                     About Streamit OTT Platform
                 </h1>
-                <p>
+                <p className="text-sm md:text-base text-gray-300">
                     Welcome to Streamit, a next-generation streaming platform proudly developed by Iqonic Design. We specialize in creating cutting-edge digital solutions, and Streamit is our latest breakthrough in the world of online entertainment. Whether you're a movie lover, a TV show binge-watcher, or enjoy live events, our platform is designed to deliver high-quality content directly to your device, ensuring a seamless, uninterrupted experience.
                 </p>
-                <p className="py-3 pb-8">
+                <p className="py-3 pb-8 text-sm md:text-base text-gray-300">
                     At Iqonic Design, we aim to revolutionize digital content consumption with Streamit, a fast, reliable, and personalized streaming platform. Built with cutting-edge technology, it offers superior streaming quality, tailored recommendations, and an intuitive content management system.
                 </p>
             </div>
@@ -58,12 +58,12 @@ const About = () => {
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
                     Your Streaming, Our Planning
                 </h2>
-                <p className="mt-4 max-w-2xl text-lg mx-auto mb-6 px-4">
+                <p className="mt-4 max-w-2xl mx-auto mb-6 px-4 text-sm md:text-base">
                     Streamit brings you entertainment that fits your lifestyle — fast, smooth, and totally tailored for you.
                 </p>
                 <Link
                     to="/pricing/pricing-plan"
-                    className="bg-red-700 hover:bg-red-800 transition px-6 md:px-8 py-2 md:py-3 rounded-md font-semibold flex gap-1 items-center w-fit mx-auto justify-center"
+                    className="text-sm md:text-base bg-red-700 hover:bg-red-800 transition px-6 md:px-8 py-2 md:py-3 rounded-md font-semibold flex gap-1 items-center w-fit mx-auto justify-center"
                 >
                     Start Trial <MdOutlinePlayArrow className="text-xl" />
                 </Link>
@@ -80,15 +80,15 @@ const About = () => {
                                 alt={member.name}
                                 className="w-full h mx-auto object-cover mb-4"
                             />
-                            <p className="text-xl font-semibold">{member.name}</p>
-                            <p className="text-gray-500">{member.role}</p>
+                            <p className="text-sm md:text-base xl:text-xl font-semibold">{member.name}</p>
+                            <p className="text-sm md:text-base xl:text-xl text-gray-500">{member.role}</p>
                         </div>
                     ))}
                 </div>
             </div>
 
             {/* connect with us */}
-            <div className="py-6 gap-4 md:gap-12 grid grid-cols-1 md:grid-cols-11 items-center bg-stone-900">
+            <div className="py-6 gap-4 md:gap-12 grid grid-cols-1 md:grid-cols-11 items-center bg-stone-900 text-sm md:text-base xl:text-xl">
                 {/* image map */}
                 <div className="md:col-span-5">
                     <img src={map} className="w-full" alt="map images" />

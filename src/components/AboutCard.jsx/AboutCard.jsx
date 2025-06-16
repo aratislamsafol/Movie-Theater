@@ -10,7 +10,7 @@ const AboutCard = () => {
             <div className="order-1 md:order-2">
                 <h1 className="font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl md:text-start">Why Choose Streamit </h1>
 
-                <p className="mt-3 border-b border-gray-800 pb-6 md:pb-8 md:text-start">Experience next-level entertainment with Streamit, the trusted streaming platform that delivers seamless content, unparalleled convenience, and high-quality entertainment. Whether you're watching Streamit ensures a premium experience every time.</p>
+                <p className="mt-3 border-b border-gray-800 pb-6 md:pb-8 md:text-start text-gray-300 text-sm md:text-base">Experience next-level entertainment with Streamit, the trusted streaming platform that delivers seamless content, unparalleled convenience, and high-quality entertainment. Whether you're watching Streamit ensures a premium experience every time.</p>
 
                 <div className="mt-10 md:mt-4 flex gap-4 flex-col md:flex-row justify-center md:justify-start items-center md:text-start">
                     <div>
@@ -43,7 +43,7 @@ const AboutCard = () => {
                     </div>
                 </div>
 
-                <div className="mt-6 flex gap-4 flex-col md:flex-row justify-center md:justify-start items-center text-start">
+                <div className="mt-6 flex gap-4 flex-col md:flex-row justify-center md:justify-start items-center md:text-start">
                     <div>
                         <RiSecurePaymentFill className="text-2xl"/>
                     </div>
