@@ -15,6 +15,8 @@ import Accordion from "../components/Accordion/Accrodion";
 import Loading from "../pages/Loading";
 import { lazy, Suspense } from "react";
 import About from "../pages/About";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import TermsCondition from "../pages/TermsCondition";
 
 const Root = lazy(() => import("../Root/Root"));
 const SinglePage = lazy(() => import("../pages/SinglePage"));
@@ -124,6 +126,27 @@ const router= createBrowserRouter([
       {
         index:true,
         element: <About></About>,
+      }
+     ]
+  },
+  {
+    path:'privacy-policy',
+     element: <Suspense fallback={<Loading />}><BreadcrumbLayout /></Suspense>,
+     children: [
+      {
+        index:true,
+        element: <PrivacyPolicy></PrivacyPolicy>,
+      }
+     ]
+  },
+
+  {
+    path:'terms',
+     element: <Suspense fallback={<Loading />}><BreadcrumbLayout /></Suspense>,
+     children: [
+      {
+        index:true,
+        element: <TermsCondition />
       }
      ]
   }
