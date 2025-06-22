@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProfileTab = ({ allData }) => {
+  const navigate = useNavigate();
   const [tabs, setTabs] = useState(() => [
     {
       name: "Playlist",
@@ -95,9 +97,8 @@ const ProfileTab = ({ allData }) => {
     { name: "Episodes", type: "episodes" },
   ], []);
 
-  // Function to handle click on a media item (movie, video, episode) for navigation
   const handleItemClick = (itemId) => {
-    window.location.href = `/item/${itemId}`;
+    navigate(`/item/${itemId}`);
   };
 
   // Function to handle deletion of a media item
@@ -284,11 +285,7 @@ const ProfileTab = ({ allData }) => {
                           key={item.id}
                           className="rounded-md overflow-hidden bg-stone-800 group"
                         >
-                          {/* Item content area - clickable for navigation */}
-                          <div
-                            onClick={() => handleItemClick(item.id)}
-                            className="cursor-pointer hover:scale-105 transition-transform duration-200"
-                          >
+                        <div onClick={() => handleItemClick(item.id)} className="cursor-pointer hover:scale-105 transition-transform duration-200">
                             <img
                               src={
                                 item.cover_image ||
