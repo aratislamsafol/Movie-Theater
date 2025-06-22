@@ -17,7 +17,7 @@ const HomeLayout = () => {
     };
 
     const [episodState, setEpisodeState] = useState([]); 
-
+    
     useEffect(() => {
         const episodes = _.flatMap(allData.tvSeries, (series) =>
             (

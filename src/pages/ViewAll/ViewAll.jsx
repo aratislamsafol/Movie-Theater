@@ -6,7 +6,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 const ITEMS_PER_PAGE = 8;
 
 const ViewAll = () => {
-    const { movies, tv_series } = useLoaderData();
+    const { movies } = useLoaderData();
     const {setWishList} = useContext(AuthContext);
     const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
     const [activeCardIdx, setActiveCardIdx] = useState(null);
@@ -18,8 +18,6 @@ const ViewAll = () => {
             </div>
         );
     }
-
-    console.log(tv_series);
 
     const allMovies = movies.movies;
     const visibleMovies = allMovies.slice(0, visibleCount);

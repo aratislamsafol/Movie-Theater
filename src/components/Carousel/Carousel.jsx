@@ -20,7 +20,6 @@ const CarouselContainer = ({
 }) => {
   
   const [activeIndex, setActiveIndex] = useState(null); 
-
   const settings = {
     dots: showDots || false,
     infinite: true,

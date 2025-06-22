@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
 import app from '../firebase/firebase.config';
 import { showError } from '../utils/SweetAlert';
@@ -25,7 +25,7 @@ const AuthProvider = ({children}) => {
     },[auth])
 
     const createAccount =(email, password) =>{setLoading(true); return createUserWithEmailAndPassword(auth, email, password)}
-    
+
     const loginAccount = async(email, password) => {
         setLoading(true); 
         try{
