@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useLoaderData } from "react-router-dom"; 
 import { FaPlay } from "react-icons/fa";
 import { AuthContext } from '../../provider/AuthProvider';
@@ -6,7 +6,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 const ITEMS_PER_PAGE = 8;
 
 const ViewAll = () => {
-    const { movies } = useLoaderData();
+    const { movies, tv_series } = useLoaderData();
     const {setWishList} = useContext(AuthContext);
     const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
     const [activeCardIdx, setActiveCardIdx] = useState(null);
@@ -18,6 +18,8 @@ const ViewAll = () => {
             </div>
         );
     }
+
+    console.log(tv_series);
 
     const allMovies = movies.movies;
     const visibleMovies = allMovies.slice(0, visibleCount);

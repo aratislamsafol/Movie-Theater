@@ -7,8 +7,15 @@ import Carousel2 from "../components/Carousel/Carousel2";
 import _ from 'lodash';
 
 const HomeLayout = () => {
-    const { movies, tvSeries } = useLoaderData();
-    const [allData, setAllData] = useState({ movies: [], tvSeries: [], upcomingMovies: [], combineOfMoviesTV:[] });
+    const { movies, tvSeries, upcomingMovies } = useLoaderData(); 
+    
+    const allData = {
+    movies: movies?.movies || [],
+    tvSeries: tvSeries?.tv_series || [],
+    upcomingMovies: upcomingMovies.upcomingMovies || [],
+    combineOfMoviesTV: [...(movies?.movies || []), ...(tvSeries?.tv_series || [])]
+    };
+
     const [episodState, setEpisodeState] = useState([]); 
 
     useEffect(() => {
@@ -20,32 +27,11 @@ const HomeLayout = () => {
                     seriesTitle: series.title,
                     season: series.seasons,
                     description: series.description,
-                    release_date:series.release_date
+                    release_date: series.release_date
                 })
             );
         setEpisodeState(episodes);
     }, [allData.tvSeries]);
-
-    //  combine movies & tvSeries Data 
-    useEffect(() => {
-        const movieData = movies?.movies || [];
-        const tvData = tvSeries?.tv_series || [];
-
-        setAllData(prevData => ({
-            ...prevData,
-            movies: movieData,
-            tvSeries: tvData,
-            combineOfMoviesTV: [...movieData, ...tvData]
-        }));
-    }, [movies, tvSeries]);
-
-    //  upComing Movies
-    useEffect(()=>{
-        fetch('/dataset/upcomingMovies.json')
-            .then(res => res.json())
-            .then(data => setAllData(prevData => ({...prevData, upcomingMovies: data})))
-    },[])
-    
 
     return (
         // wrapper
@@ -75,15 +61,17 @@ const HomeLayout = () => {
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Fresh Picks Just For You</h2>
                             <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
-                        <CarouselContainer className="px-2" allData={movies.movies} indexItem={false} detailsHover={true} aspectCss={false}  showDots={false} autoPlaySpeed={3000}/>
+                        {/* Use allData.movies now, as it's directly from loader */}
+                        <CarouselContainer className="px-2" allData={allData.movies} indexItem={false} detailsHover={true} aspectCss={false} showDots={false} autoPlaySpeed={3000}/>
                     </div>
                     {/* Upcoming Movies */}
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <div className="flex justify-between items-center">
-                            <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4  px-3">Upcoming Movies</h2>
+                            <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Upcoming Movies</h2>
                             <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
-                        <CarouselContainer className="px-2" allData={allData.upcomingMovies} indexItem={false} detailsHover={true} aspectCss={true}  showDots={true} autoPlaySpeed={2400}/>
+                        {/* Now allData.upcomingMovies holds the data from the loader */}
+                        <CarouselContainer className="px-2" allData={allData.upcomingMovies} indexItem={false} detailsHover={true} aspectCss={true} showDots={true} autoPlaySpeed={2400}/>
                     </div>
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <Banner/>
@@ -94,7 +82,8 @@ const HomeLayout = () => {
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Your Favorite Personality</h2>
                             <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
-                        <CarouselContainer className="px-2" allData={allData.upcomingMovies} indexItem={false} detailsHover={true} aspectCss={true}  showDots={true} autoPlaySpeed={2400}/>
+                        {/* Assuming you want to use upcomingMovies here as well, or you could load separate data for personalities */}
+                        <CarouselContainer className="px-2" allData={allData.upcomingMovies} indexItem={false} detailsHover={true} aspectCss={true} showDots={true} autoPlaySpeed={2400}/>
                     </div>
                     {/* Popular Movies */}
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
@@ -102,19 +91,19 @@ const HomeLayout = () => {
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Popular Movies</h2>
                             <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
-                        <CarouselContainer className="px-2" allData={allData.movies.sort((a, b) => b.rating - a.rating)} indexItem={false} detailsHover={true} aspectCss={true}  showDots={true} autoPlaySpeed={2400}/>
+                        <CarouselContainer className="px-2" allData={allData.movies.sort((a, b) => b.rating - a.rating)} indexItem={false} detailsHover={true} aspectCss={true} showDots={true} autoPlaySpeed={2400}/>
                     </div>
                     {/* TV Series banner */}
-                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
+                    <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <Carousel2 className="px-2" allData={episodState}/>
                     </div>
                     {/* Movie Genres */}
-                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
+                    <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
                         <div className="flex justify-between items-center">
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Movie Genre</h2>
                             <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
-                        <CarouselContainer className="px-2" allData={allData.combineOfMoviesTV} indexItem={false} detailsHover={true} aspectCss={false}  showDots={false} autoPlaySpeed={3000} contentName={true}/>
+                        <CarouselContainer className="px-2" allData={allData.combineOfMoviesTV} indexItem={false} detailsHover={true} aspectCss={false} showDots={false} autoPlaySpeed={3000} contentName={true}/>
                     </div>
                     {/* Recommended for You */}
                     <div className="my-2 sm:my-3 md:my-6 lg:my-8 xl:my-10">
@@ -122,7 +111,7 @@ const HomeLayout = () => {
                             <h2 className="text-xl sm:text-2xl md:text-3xl text-white font-semibold py-2 md:py-4 px-3">Recommended for You</h2>
                             <Link to="/movies" className="text-red-700 mx-3 font-medium text-base md:text-lg">View All</Link>
                         </div>
-                        <CarouselContainer className="px-2" allData={allData.movies.sort((a, b) => b.rating - a.rating)} indexItem={false} detailsHover={true} aspectCss={true}  showDots={false} autoPlaySpeed={2400}/>
+                        <CarouselContainer className="px-2" allData={allData.movies.sort((a, b) => b.rating - a.rating)} indexItem={false} detailsHover={true} aspectCss={true} showDots={false} autoPlaySpeed={2400}/>
                     </div>
                 </main>
             </div>

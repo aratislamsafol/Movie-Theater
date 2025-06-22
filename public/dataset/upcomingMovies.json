@@ -1,4 +1,4 @@
-[
+{"upcomingMovies":[
   {
     "id": 1001,
     "title": "Galactic Odyssey",
@@ -102,3 +102,4 @@
     "category": "Sci-Fi"
   }
 ]
+}

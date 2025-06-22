@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, sendEmailVerification, signInWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
 import app from '../firebase/firebase.config';
+import { showError } from '../utils/SweetAlert';
 
 export const AuthContext = createContext();
 
@@ -12,11 +13,9 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
-            // Only set the user if they exist and their email is verified
             if (currentUser && currentUser.emailVerified) {
                 setUser(currentUser);
             } else {
-                // If no user, or user exists but email is not verified, set user to null
                 setUser(null);
             }
 
@@ -26,7 +25,28 @@ const AuthProvider = ({children}) => {
     },[auth])
 
     const createAccount =(email, password) =>{setLoading(true); return createUserWithEmailAndPassword(auth, email, password)}
-    const loginAccount = (email, password) => {setLoading(true); return signInWithEmailAndPassword(auth, email, password)};
+    
+    const loginAccount = async(email, password) => {
+        setLoading(true); 
+        try{
+            const userCredential = await signInWithEmailAndPassword(auth, email, password);
+            const isLoggeiIn = userCredential.user;
+
+            if(isLoggeiIn.emailVerified) {
+                console.log(userCredential)
+                return userCredential;
+            }else {
+                await signOut(auth);
+                showError("Email Verified First then Login");
+                throw new Error("Please verify your email before logging in.");
+            }
+        }catch (error) {
+            console.log(error.message);
+            throw error;
+        } finally {
+            setLoading(false);
+        }
+    }
     const logOut = ()=>{ setLoading(true); return signOut(auth); }
     const updateUserProfile = (updateData) => updateProfile(auth.currentUser, updateData);
 

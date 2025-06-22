@@ -33,7 +33,7 @@ const router= createBrowserRouter([
       {
         path: "/",
         element: <HomeLayout></HomeLayout>,
-        loader: Loader('/dataset/movies.json','/dataset/tvseris.json')
+        loader: Loader('/dataset/movies.json','/dataset/tvseris.json', '/dataset/upcomingMovies.json')
       }, 
       {
         path: "item/:id",
@@ -82,8 +82,19 @@ const router= createBrowserRouter([
     children: [
       {
         index: true,
-        element: <ViewAll></ViewAll>, 
+        element: <ViewAll></ViewAll>,  
         loader: Loader('/dataset/movies.json')
+      }
+    ]
+  },
+  {
+    path:'tv-shows',
+    element: <Suspense fallback={<Loading />}><BreadcrumbLayout /></Suspense>,
+    children: [
+      {
+        index: true,
+        element: <ViewAll></ViewAll>, 
+        loader: Loader('/dataset/tvseris.json')
       }
     ]
   },

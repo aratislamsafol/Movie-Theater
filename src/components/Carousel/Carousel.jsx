@@ -52,20 +52,20 @@ const CarouselContainer = ({
   return (
     <div className="carousel-container overflow-hidden">
       <Slider {...settings}>
-        {[...allData].map((data, index) => {
+        {Array.isArray(allData) && [...allData].map((data, index) => {
           const isActive = activeIndex === index;
 
           return (
             <div
               key={data.id}
               className="p-2 group/item"
-              onClick={() => setActiveIndex(index)} // Mobile touch only
+              onClick={() => setActiveIndex(index)}
               onMouseEnter={() => setActiveIndex(index)} 
               onMouseLeave={() => setActiveIndex(null)}  
             >
               <div className="rounded-xl block relative overflow-hidden transition-all duration-300 group-hover/item:scale-110">
                 <Link
-                  to=""
+                  to={`/item/${data.id}`}
                   className={`block relative w-full h-full ${aspectCss ? "aspect-[1/1.4]" : "aspect-[1/.7]"}`}
                 >
                   <img

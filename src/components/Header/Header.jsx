@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { FaUserCircle, FaRegUser, FaRegBookmark, FaListAlt, FaRegBell, FaSignOutAlt } from 'react-icons/fa'; // Import additional icons
 
-const Header = ({ location }) => {
+const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     const { isOpen } = useContext(OffCanvasContext);
     const [showModal, setShowModal] = useState(false);
